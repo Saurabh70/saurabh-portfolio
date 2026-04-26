@@ -109,6 +109,15 @@ if (!company) {
     </div>
   `;
 
+  // Intro — if exists
+  if (company.intro) {
+    html += `
+      <div class="demo-section demo-intro-section">
+        <div class="demo-section-body">${company.intro}</div>
+      </div>
+    `;
+  }
+
   // Section 01 — Research / Understand
   html += `
     <div class="demo-section" id="sec-research">
@@ -124,6 +133,7 @@ if (!company) {
     <div class="demo-section" id="sec-gaps">
       <div class="demo-section-num">02</div>
       <div class="demo-section-title">${company.gaps.title}</div>
+      ${company.gaps.intro ? `<div class="demo-section-body" style="margin-bottom:20px;">${company.gaps.intro}</div>` : ''}
       ${company.gaps.items.map((g, i) => `
         <div class="demo-gap-card">
           <div class="demo-gap-label">gap ${String(i + 1).padStart(2, '0')}</div>
@@ -139,6 +149,7 @@ if (!company) {
     <div class="demo-section" id="sec-whyme">
       <div class="demo-section-num">03</div>
       <div class="demo-section-title">${company.whyme.title}</div>
+      ${company.whyme.intro ? `<div class="demo-section-body" style="margin-bottom:20px;">${company.whyme.intro}</div>` : ''}
       <div class="demo-compare-header">
         <span>your problem</span>
         <span>my equivalent work</span>
@@ -177,7 +188,7 @@ if (!company) {
   const c = company.closing;
   html += `
     <div class="demo-closing" id="sec-closing">
-      <div class="demo-closing-text">\u201C${c.content}\u201D</div>
+      <div class="demo-closing-text">${c.content}</div>
       <div class="demo-closing-name">${c.name}</div>
       <div class="demo-closing-links">
         <a href="tel:${c.phone.replace(/\s/g, '')}">${c.phone}</a><br>
