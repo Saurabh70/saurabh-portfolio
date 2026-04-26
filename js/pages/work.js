@@ -136,7 +136,14 @@ function buildWorkList() {
       <ul class="work-bullets">
         ${entry.bullets.map(b => `<li>${b}</li>`).join('')}
       </ul>
+      <button class="work-read-btn" data-cs-index="${idx}">read case study \u2192</button>
     `;
+
+    card.querySelector('.work-read-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      openCaseStudy(idx);
+    });
+
     container.appendChild(card);
   });
 

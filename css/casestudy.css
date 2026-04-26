@@ -1,0 +1,303 @@
+/* ═══════════════════════════════════════════
+   CASE STUDY DRAWER
+   Slides in from right over the page
+   ═══════════════════════════════════════════ */
+
+/* Read button on work cards */
+.work-read-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--blue);
+  background: none;
+  border: none;
+  cursor: none;
+  padding: 8px 0 0;
+  transition: color 0.2s;
+  position: relative;
+}
+.work-read-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 1.5px;
+  background: var(--red);
+  transition: width 0.3s;
+}
+.work-read-btn:hover { color: var(--red); }
+.work-read-btn:hover::after { width: 100%; }
+
+@media (max-width: 768px) {
+  .work-read-btn { cursor: pointer; }
+}
+
+/* ── Drawer overlay ── */
+.cs-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 6000;
+  pointer-events: none;
+}
+.cs-drawer.open { pointer-events: auto; }
+
+.cs-backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+.cs-drawer.open .cs-backdrop { opacity: 1; }
+
+/* ── Drawer panel ── */
+.cs-panel {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 100%;
+  max-width: 780px;
+  background: var(--bg-card);
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: -4px 0 24px var(--sh-lg);
+  padding: 40px 48px 80px;
+}
+.cs-drawer.open .cs-panel { transform: translateX(0); }
+
+/* ── Back button ── */
+.cs-back {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: var(--ink-muted);
+  background: none;
+  border: none;
+  cursor: none;
+  margin-bottom: 28px;
+  transition: color 0.2s;
+  display: inline-block;
+}
+.cs-back:hover { color: var(--red); }
+
+/* ── Header ── */
+.cs-label {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: var(--ink-faint);
+  margin-bottom: 6px;
+  transform: rotate(-0.4deg);
+}
+
+.cs-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.cs-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  color: var(--ink-muted);
+  margin-bottom: 16px;
+}
+
+/* Metric pills */
+.cs-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.cs-metric-pill {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: var(--red);
+  padding: 4px 14px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+/* Wobbly separator */
+.cs-sep {
+  width: 100%;
+  height: 8px;
+  margin: 8px 0 32px;
+}
+.cs-sep path {
+  stroke: var(--ink);
+  stroke-width: 0.8;
+  fill: none;
+  opacity: 0.15;
+  stroke-linecap: round;
+}
+
+/* ── Sections ── */
+.cs-section {
+  margin-bottom: 36px;
+  position: relative;
+}
+
+.cs-section-label {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  color: var(--ink-faint);
+  margin-bottom: 10px;
+  display: block;
+  transform: rotate(-0.3deg);
+}
+
+.cs-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--ink-secondary);
+  max-width: 620px;
+}
+
+.cs-body-muted {
+  color: var(--ink-muted);
+}
+
+.cs-body-italic {
+  font-style: italic;
+  color: var(--ink-muted);
+  margin-top: 16px;
+}
+
+/* Margin bracket */
+.cs-margin-bracket {
+  position: absolute;
+  left: -28px;
+  top: 30px;
+  width: 18px;
+  opacity: 0.3;
+}
+.cs-margin-bracket path {
+  stroke: var(--red);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+}
+
+/* Margin icon */
+.cs-margin-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.25;
+}
+
+/* ── Sub-cards (what we built) ── */
+.cs-subcards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cs-subcard {
+  background: var(--bg);
+  padding: 22px 24px 18px;
+  position: relative;
+  box-shadow: 2px 2px 8px var(--sh-xs);
+  max-width: 580px;
+  transition: background 0.4s;
+}
+
+.cs-subcard-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.cs-subcard-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--ink-secondary);
+  margin-bottom: 10px;
+}
+
+.cs-subcard-metric {
+  font-family: 'Caveat', cursive;
+  font-size: 0.95rem;
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* ── Bullet list (my role) ── */
+.cs-bullets {
+  list-style: none;
+  padding: 0;
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--ink-detail);
+}
+.cs-bullets li {
+  padding: 4px 0 4px 22px;
+  position: relative;
+}
+.cs-bullets li::before {
+  content: '\2192';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* ── Outcome grid ── */
+.cs-outcome-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  margin-bottom: 20px;
+  max-width: 480px;
+}
+
+.cs-outcome-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  color: var(--red);
+  line-height: 1;
+}
+
+.cs-outcome-label {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: var(--ink-secondary);
+}
+
+/* ── Placeholder (coming soon) ── */
+.cs-placeholder {
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  color: var(--ink-ghost);
+  margin-top: 40px;
+  transform: rotate(-0.8deg);
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .cs-panel {
+    max-width: 100%;
+    padding: 24px 20px 80px;
+  }
+  .cs-back { cursor: pointer; }
+  .cs-title { font-size: 1.8rem; }
+  .cs-margin-bracket { display: none; }
+  .cs-margin-icon { display: none; }
+  .cs-subcard { padding: 18px 16px 14px; }
+  .cs-subcard-title { font-size: 1.15rem; }
+  .cs-outcome-grid { gap: 14px 24px; }
+  .cs-outcome-num { font-size: 2rem; }
+}
