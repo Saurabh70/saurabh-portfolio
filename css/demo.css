@@ -1,0 +1,393 @@
+/* ═══════════════════════════════════════════
+   DEMO PAGE — clean pitch document
+   ═══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body.demo-body {
+  background: #F5F0E6;
+  color: #1A1714;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+/* Dot grid bg */
+body.demo-body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, #c8c0b0 0.6px, transparent 0.6px);
+  background-size: 28px 28px;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.demo-wrap {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 32px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Top bar ── */
+.demo-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 14px;
+  margin-bottom: 8px;
+}
+
+.demo-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  color: #1A1714;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.demo-logo:hover { color: #D4380D; }
+
+.demo-prepared {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: #999;
+  text-align: right;
+}
+
+.demo-topbar-line {
+  width: 100%;
+  height: 6px;
+  margin-bottom: 48px;
+}
+.demo-topbar-line path {
+  stroke: #1A1714;
+  stroke-width: 0.7;
+  fill: none;
+  opacity: 0.15;
+  stroke-linecap: round;
+}
+
+/* ── Hero ── */
+.demo-hero {
+  margin-bottom: 56px;
+}
+
+.demo-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.demo-hero-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  color: #777;
+  transform: rotate(-0.4deg);
+}
+
+/* ── Section number + title ── */
+.demo-section {
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.demo-section-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.8rem;
+  color: #D4380D;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.demo-section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.demo-section-body {
+  font-size: 0.94rem;
+  line-height: 1.75;
+  color: #444;
+  max-width: 620px;
+}
+
+/* Margin bracket */
+.demo-bracket {
+  position: absolute;
+  left: -30px;
+  top: 40px;
+  width: 18px;
+  opacity: 0.25;
+}
+.demo-bracket path {
+  stroke: #D4380D;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 1s ease;
+}
+.demo-bracket.visible path {
+  stroke-dashoffset: 0;
+}
+
+/* ── Gap cards ── */
+.demo-gap-card {
+  background: #F0EBE0;
+  padding: 24px 26px 20px;
+  margin-bottom: 18px;
+  position: relative;
+  box-shadow: 1px 2px 8px rgba(0,0,0,0.06);
+}
+
+.demo-gap-label {
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.demo-gap-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.demo-gap-body {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ── Why me — comparison table ── */
+.demo-compare {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.demo-compare-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.demo-compare-header span {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: #999;
+}
+
+.demo-compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 14px 0;
+  border-top: 1px dashed rgba(0,0,0,0.08);
+}
+
+.demo-compare-problem {
+  font-size: 0.9rem;
+  color: #1A1714;
+  font-weight: 500;
+}
+
+.demo-compare-work {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ── Phone mockup ── */
+.demo-phone-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.demo-phone {
+  width: 320px;
+  height: 580px;
+  border: 2.5px solid #1A1714;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 4px 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Notch */
+.demo-phone::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 24px;
+  background: #1A1714;
+  border-radius: 0 0 16px 16px;
+  z-index: 2;
+}
+
+.demo-phone-screen {
+  position: absolute;
+  inset: 0;
+  padding: 36px 16px 16px;
+  overflow-y: auto;
+}
+
+.demo-phone-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.demo-phone-btn {
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  color: #2B4EFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: color 0.2s;
+}
+.demo-phone-btn:hover { color: #D4380D; }
+.demo-phone-btn:disabled { color: #ccc; cursor: default; }
+
+.demo-phone-counter {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.85rem;
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+.demo-screen-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.demo-screen-desc {
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+  margin-top: 4px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Closing ── */
+.demo-closing {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px dashed rgba(0,0,0,0.1);
+}
+
+.demo-closing-text {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 24px;
+  transform: rotate(-0.3deg);
+  max-width: 520px;
+}
+
+.demo-closing-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Signature underline */
+.demo-closing-name::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #D4380D;
+  opacity: 0.4;
+  border-radius: 2px;
+}
+
+.demo-closing-links {
+  font-size: 0.88rem;
+  color: #777;
+  line-height: 1.8;
+}
+.demo-closing-links a {
+  color: #2B4EFF;
+  text-decoration: none;
+}
+.demo-closing-links a:hover { color: #D4380D; }
+
+/* ── Coming soon ── */
+.demo-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.demo-soon-text {
+  font-family: 'Caveat', cursive;
+  font-size: 1.8rem;
+  color: #aaa;
+  transform: rotate(-0.8deg);
+  margin-bottom: 20px;
+}
+
+.demo-soon-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: #2B4EFF;
+  text-decoration: none;
+}
+.demo-soon-link:hover { color: #D4380D; }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .demo-wrap { padding: 0 18px 60px; }
+  .demo-bracket { display: none; }
+  .demo-hero h1 { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+
+  .demo-compare-header,
+  .demo-compare-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .demo-compare-row { padding: 12px 0; }
+  .demo-compare-work { padding-left: 16px; position: relative; }
+  .demo-compare-work::before {
+    content: '\2192';
+    position: absolute;
+    left: 0;
+    color: #D4380D;
+  }
+
+  .demo-phone { width: 100%; max-width: 320px; height: 520px; }
+}

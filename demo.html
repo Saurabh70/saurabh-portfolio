@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo — Saurabh Kumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/demo.css">
+</head>
+<body class="demo-body">
+
+<div class="demo-wrap" id="demo-root"></div>
+
+<script src="demo-config.js"></script>
+<script>
+/* ═══════════════════════════════════════════
+   Demo page — routing + rendering
+   ═══════════════════════════════════════════ */
+
+// Resolve company slug from URL
+// Supports: /demo/zenda, /demo.html?c=zenda, /demo.html#zenda
+function getSlug() {
+  // Clean path: /demo/zenda or /saurabh-portfolio/demo/zenda
+  const path = window.location.pathname;
+  const match = path.match(/\/demo\/([a-zA-Z0-9_-]+)/);
+  if (match) return match[1].toLowerCase();
+  // Query param fallback
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('c')) return params.get('c').toLowerCase();
+  // Hash fallback
+  if (window.location.hash.length > 1) return window.location.hash.slice(1).toLowerCase();
+  return null;
+}
+
+const slug = getSlug();
+const company = slug ? DEMO_COMPANIES[slug] : null;
+const root = document.getElementById('demo-root');
+
+// Get base path for links back to main site
+function getBasePath() {
+  const path = window.location.pathname;
+  // If we're at /saurabh-portfolio/demo/x, base is /saurabh-portfolio/
+  const idx = path.indexOf('/demo');
+  return idx > 0 ? path.substring(0, idx) + '/' : '/';
+}
+const BASE = getBasePath();
+
+function today() {
+  return new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+}
+
+function wavySVG() {
+  return `<svg class="demo-topbar-line" viewBox="0 0 700 6" preserveAspectRatio="none"><path d="M0 3 Q175 0 350 4 Q525 8 700 2"/></svg>`;
+}
+
+function topbar(companyName) {
+  return `
+    <div class="demo-topbar">
+      <a href="${BASE}" class="demo-logo">SK.</a>
+      <div class="demo-prepared">${companyName ? 'prepared for ' + companyName : ''} · ${today()}</div>
+    </div>
+    ${wavySVG()}
+  `;
+}
+
+// ── Coming soon page ──
+if (!company) {
+  document.title = 'Demo — Saurabh Kumar';
+  root.innerHTML = `
+    ${topbar(null)}
+    <div class="demo-soon">
+      <div class="demo-soon-text">this one's still being crafted.</div>
+      <a href="${BASE}" class="demo-soon-link">← back to portfolio</a>
+    </div>
+  `;
+} else {
+  // ── Full demo page ──
+  document.title = `${company.companyName} — Saurabh Kumar`;
+
+  let html = topbar(company.companyName);
+
+  // Hero
+  html += `
+    <div class="demo-hero">
+      <h1>${company.headline}</h1>
+      <div class="demo-hero-sub">${company.subline}</div>
+    </div>
+  `;
+
+  // Section 01 — Understand
+  html += `
+    <div class="demo-section" id="sec-understand">
+      <svg class="demo-bracket" viewBox="0 0 18 80" fill="none"><path d="M14 2 C6 2 4 14 4 40 C4 66 6 78 14 78"/></svg>
+      <div class="demo-section-num">01</div>
+      <div class="demo-section-title">${company.understand.title}</div>
+      <div class="demo-section-body">${company.understand.content}</div>
+    </div>
+  `;
+
+  // Section 02 — Gaps
+  html += `
+    <div class="demo-section">
+      <div class="demo-section-num">02</div>
+      <div class="demo-section-title">${company.gaps.title}</div>
+      ${company.gaps.items.map((g, i) => `
+        <div class="demo-gap-card">
+          <div class="demo-gap-label">gap ${String(i + 1).padStart(2, '0')}</div>
+          <div class="demo-gap-title">${g.title}</div>
+          <div class="demo-gap-body">${g.content}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  // Section 03 — Why me
+  html += `
+    <div class="demo-section">
+      <div class="demo-section-num">03</div>
+      <div class="demo-section-title">${company.whyme.title}</div>
+      <div class="demo-compare-header">
+        <span>your problem</span>
+        <span>my equivalent work</span>
+      </div>
+      ${company.whyme.rows.map(r => `
+        <div class="demo-compare-row">
+          <div class="demo-compare-problem">${r.problem}</div>
+          <div class="demo-compare-work">${r.mywork}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  // Section 04 — Demo
+  html += `
+    <div class="demo-section">
+      <div class="demo-section-num">04</div>
+      <div class="demo-section-title">${company.demo.title}</div>
+      <div class="demo-section-body" style="margin-bottom:24px;">${company.demo.intro}</div>
+      <div class="demo-phone-wrap">
+        <div class="demo-phone">
+          <div class="demo-phone-screen" id="phone-screen"></div>
+        </div>
+        <div class="demo-phone-nav">
+          <button class="demo-phone-btn" id="phone-prev" aria-label="Previous">← prev</button>
+          <span class="demo-phone-counter" id="phone-counter"></span>
+          <button class="demo-phone-btn" id="phone-next" aria-label="Next">next →</button>
+        </div>
+        <div class="demo-screen-title" id="screen-title"></div>
+        <div class="demo-screen-desc" id="screen-desc"></div>
+      </div>
+    </div>
+  `;
+
+  // Section 05 — Closing
+  const c = company.closing;
+  html += `
+    <div class="demo-closing">
+      <div class="demo-closing-text">"${c.content}"</div>
+      <div class="demo-closing-name">${c.name}</div>
+      <div class="demo-closing-links">
+        <a href="tel:${c.phone.replace(/\s/g, '')}">${c.phone}</a><br>
+        <a href="mailto:${c.email}">${c.email}</a><br>
+        <a href="${c.linkedin}" target="_blank">LinkedIn →</a>
+      </div>
+    </div>
+  `;
+
+  root.innerHTML = html;
+
+  // ── Phone screen navigation ──
+  const screens = company.demo.screens;
+  let currentScreen = 0;
+
+  function renderScreen() {
+    const s = screens[currentScreen];
+    document.getElementById('phone-screen').innerHTML = s.content;
+    document.getElementById('phone-counter').textContent =
+      String(currentScreen + 1).padStart(2, '0') + ' / ' + String(screens.length).padStart(2, '0');
+    document.getElementById('screen-title').textContent = s.title;
+    document.getElementById('screen-desc').textContent = s.description;
+    document.getElementById('phone-prev').disabled = currentScreen === 0;
+    document.getElementById('phone-next').disabled = currentScreen === screens.length - 1;
+  }
+
+  document.getElementById('phone-prev').addEventListener('click', () => {
+    if (currentScreen > 0) { currentScreen--; renderScreen(); }
+  });
+  document.getElementById('phone-next').addEventListener('click', () => {
+    if (currentScreen < screens.length - 1) { currentScreen++; renderScreen(); }
+  });
+
+  renderScreen();
+
+  // ── Bracket draw-in on scroll ──
+  const bracket = document.querySelector('.demo-bracket');
+  if (bracket) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) bracket.classList.add('visible'); });
+    }, { threshold: 0.3 });
+    obs.observe(bracket);
+  }
+}
+</script>
+</body>
+</html>

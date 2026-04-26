@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+  // GitHub Pages SPA routing hack
+  // If the URL is /demo/something, redirect to demo.html preserving the slug
+  var path = window.location.pathname;
+  var match = path.match(/\/demo\/([a-zA-Z0-9_-]+)/);
+  if (match) {
+    // Preserve the full path so demo.html can parse it
+    var base = path.substring(0, path.indexOf('/demo'));
+    window.location.replace(base + '/demo.html?c=' + match[1]);
+  } else {
+    // Actual 404 — redirect to home
+    window.location.replace('/saurabh-portfolio/');
+  }
+</script>
+</head>
+<body></body>
+</html>

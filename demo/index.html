@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+  // /demo/ without a slug — redirect to demo.html (shows coming soon)
+  var base = window.location.pathname.replace(/\/demo\/?$/, '');
+  window.location.replace(base + '/demo.html');
+</script>
+</head>
+<body></body>
+</html>
