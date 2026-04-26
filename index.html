@@ -171,7 +171,7 @@
         <div class="avail-links">
           <a href="https://www.linkedin.com/in/saurabh-kumar-workhard/" target="_blank" rel="noopener" class="avail-btn">Connect on LinkedIn →</a>
           <span class="avail-sep">·</span>
-          <a href="Saurabh_Kumar_Resume.docx" download class="avail-btn">Download Resume →</a>
+          <a href="#" class="avail-btn" onclick="openResumeViewer(); return false;">View Resume →</a>
           <span class="avail-sep">·</span>
           <a href="mailto:mr.saurabh.kumar408@gmail.com?subject=Let's%20talk%20%E2%80%94%20Product%20Manager%20role&body=Hi%20Saurabh%2C%20I%20came%20across%20your%20profile%20and%20would%20love%20to%20connect%20about%20a%20Product%20Manager%20opportunity.%20Would%20you%20be%20open%20to%20a%20conversation%3F" class="avail-btn">Mail me →</a>
         </div>
@@ -393,7 +393,7 @@
               <svg width="14" height="16" viewBox="0 0 14 16" fill="none" class="doodle-svg ct-icon"><path class="draw-in" style="--dash-len:60" d="M2 1 L2 15 L12 15 L12 5 L8 1 Z M8 1 L8 5 L12 5" stroke="var(--ink)" stroke-width="1.1"/></svg>
               resume
             </div>
-            <a href="Saurabh_Kumar_Resume.docx" download class="ct-value ct-link">download my resume (.docx)</a>
+            <a href="#" class="ct-value ct-link" onclick="openResumeViewer(); return false;">view or download my resume</a>
             <svg class="ct-line doodle-svg" viewBox="0 0 300 6" preserveAspectRatio="none"><path class="draw-in" style="--dash-len:320" d="M0 3 Q75 6 150 2 Q225 5 300 3" stroke="var(--ink)" stroke-width="0.8" opacity="0.15"/></svg>
           </div>
         </div>
@@ -405,6 +405,109 @@
   </section>
 
 </main>
+
+<!-- Resume Viewer -->
+<div class="resume-viewer" id="resume-viewer">
+  <div class="resume-viewer-backdrop" id="resume-viewer-backdrop"></div>
+  <div class="resume-viewer-panel">
+    <div class="resume-viewer-toolbar">
+      <button class="resume-viewer-close" id="resume-viewer-close">← back</button>
+      <a href="Saurabh_Kumar_Resume.docx" download class="resume-download-btn">↓ Download .docx</a>
+    </div>
+    <div class="resume-body" id="resume-body">
+
+      <div class="rv-header">
+        <div class="rv-name">Saurabh Kumar</div>
+        <div class="rv-tagline">Product Manager &nbsp;|&nbsp; Retention · AI Products · Platform Infrastructure · Ops Automation</div>
+        <div class="rv-contact">+91-9369095275 &nbsp;|&nbsp; <a href="mailto:mr.saurabh.kumar408@gmail.com">mr.saurabh.kumar408@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/saurabh-kumar-workhard/" target="_blank">LinkedIn</a></div>
+      </div>
+
+      <div class="rv-section-title">SUMMARY</div>
+      <div class="rv-rule"></div>
+      <p class="rv-para">Product Manager with 3+ years building 0→1 systems across retention, AI, platform infrastructure, and operational automation. Stepped into full product vertical ownership after senior PM exit — led cross-functional teams of 13, shipped 20+ core initiatives, and consistently moved metrics across engagement, efficiency, and scale. Experience spans AI product ownership, ops automation, in-person therapy infrastructure, and enterprise platform thinking. Domain is healthtech; the skills transfer anywhere.</p>
+
+      <div class="rv-section-title">EXPERIENCE</div>
+      <div class="rv-rule"></div>
+
+      <div class="rv-role-row"><span class="rv-role">Product Manager — Associate Product Manager</span><span class="rv-date">Nov 2022 — Present</span></div>
+      <div class="rv-company">YourDOST · India's largest online therapy platform · 5M+ users · 100+ enterprise clients</div>
+
+      <div class="rv-sub">AI Initiatives &amp; Therapy Intelligence</div>
+      <ul class="rv-bullets">
+        <li>Designed and shipped two AI workflow systems serving 12,000 users and 15,000 therapy sessions/month</li>
+        <li>User-side: AI session summarisation → structured homework → product nudges → 32% improvement in 3+ session therapy adherence</li>
+        <li>Therapist-side: Shipped Arva AI, a simulated-user training copilot for new therapist onboarding; real-time session copilot with user history, nudges, and live cues — saving 810 admin hours/month</li>
+        <li>Privacy-first: consent-layer controls per session and per data point; full anonymisation before any GenAI processing on clinical data</li>
+        <li>Owned end-to-end: prompt design, clinical team validation, cost/usage/failure monitoring frameworks for first-ever AI rollout</li>
+        <li>Improved therapy NPS and satisfaction from 7.5 → 9.2</li>
+      </ul>
+
+      <div class="rv-sub">Critical Product Flows</div>
+      <ul class="rv-bullets">
+        <li>In-Person Counselling Infrastructure: Scaled offline therapy from 30 → 150 geographies and 1,200 sessions/month with zero prior system; built geo-fenced Expert App with OTP session initiation, consent and psychoeducation flows — deployed across white collar, blue collar, mining, and remote locations across India</li>
+        <li>Org Tiering &amp; Slot Personalisation: Designed dynamic tiering system factoring org priority, user criticality, and platform behaviour — increased premium slot visibility by 42% while limiting overall utilisation impact to 5%</li>
+        <li>Servicing &amp; Support Automation: Eliminated 1,420 hours/month of manual work (720 servicing + 700 support) via bot-first support layer and automated no-show detection; maintained expert no-show rate at 0.75% and user no-show at 20% post-automation</li>
+      </ul>
+
+      <div class="rv-sub">User Retention &amp; Everyday Engagement</div>
+      <ul class="rv-bullets">
+        <li>Identified over-reliance on therapy (65% of platform activity) as a retention risk; built a parallel engagement layer across 9,000 users over 2 years — shifting non-therapy engagement from 35% → 45%</li>
+        <li>Neuroscience-based mind games across 5 cognitive skills: 6,500 users in 3 months, 2,000–2,500 weekly sessions, D7/D14 retention of 19% and 7%</li>
+        <li>Launched Stepathon, Sleepathon, and 21-day challenges across 50 organisations — 2,000 active participants</li>
+        <li>Offline-to-online activation reaching 15,000 users; issue-based journeys across yoga, smoking cessation, digital detox, and maternity</li>
+        <li>Implemented PostHog as product analytics system — instrumented retention and engagement funnels for the first time</li>
+      </ul>
+
+      <div class="rv-sub">Sprint &amp; Release Infrastructure</div>
+      <ul class="rv-bullets">
+        <li>Assumed full product and delivery ownership after senior PM's departure; directly managed 2 junior PMs, 2 QAs, 2 designers alongside 7-member engineering team</li>
+        <li>Inherited 65% sprint spillover and no release review process; restructured delivery with test-case-based QA, daily standups, and stakeholder UATs</li>
+        <li>Introduced engineering bandwidth model: 60% core features (1 major release per 2 sprints), 30% client customisations, 10% bugs and mentorship</li>
+        <li>Reduced sprint spillover from 65% → 20–30% within 3 sprints; established weekly predictable release cadence</li>
+        <li>Centralised bug escalation under PM ownership — resolution SLA cut from 72 hours → 12 hours</li>
+      </ul>
+
+      <div class="rv-sub">PM-Led Prototyping &amp; Demo Culture</div>
+      <ul class="rv-bullets">
+        <li>Shifted delivery from PRD-only handoffs to demo-ready builds using Claude Code, Lovable, and Google AI Studio — enabling PM-led pilots before engineering investment</li>
+        <li>Decomposed roadmap into structured epics and user stories — increased cross-functional collaboration by 40%</li>
+        <li>Shipped early-stage pilots for journaling, habit building, and impact journeys with real users before full engineering commitment</li>
+      </ul>
+
+      <div class="rv-role-row"><span class="rv-role">Founder's Office Associate</span><span class="rv-date">Nov 2022 — Jun 2023</span></div>
+      <div class="rv-company">YourDOST</div>
+      <ul class="rv-bullets">
+        <li>Drove cross-functional initiatives across growth, operations, and early product experiments; transitioned into APM role through demonstrated product ownership</li>
+      </ul>
+
+      <div class="rv-role-row"><span class="rv-role">Management Trainee — Product &amp; Community</span><span class="rv-date">Oct 2021 — Nov 2022</span></div>
+      <div class="rv-company">Seekho · edtech startup</div>
+      <ul class="rv-bullets">
+        <li>Led migration of 13,000+ users from WhatsApp to app-based platform; conducted 300+ user interviews and analysed 25+ competing platforms</li>
+        <li>Rebuilt onboarding using AARRR framework — increased activation from 30% → 55%, 100% app engagement improvement, 20% DAU growth, 50% MAU retention</li>
+        <li>Helped 500+ users secure jobs or promotions through improved content discovery and structured learning journeys</li>
+      </ul>
+
+      <div class="rv-section-title">SKILLS</div>
+      <div class="rv-rule"></div>
+      <p class="rv-para"><strong>Product:</strong> 0→1 Development, Retention &amp; Growth, AI Product Ownership, User Research, Funnel Analytics, A/B Testing, Cross-functional Leadership, Platform Thinking, Ops Automation</p>
+      <p class="rv-para"><strong>AI &amp; Tooling:</strong> Prompt Design, Claude Code, Lovable, Google AI Studio, Rapid Prototyping, LLM Workflow Automation</p>
+      <p class="rv-para"><strong>Analytics:</strong> SQL, Amplitude, Mixpanel, PostHog</p>
+      <p class="rv-para"><strong>Delivery &amp; Design:</strong> Sprint Management, Agile, Epics &amp; User Stories, Stakeholder Management, Figma</p>
+
+      <div class="rv-section-title">EDUCATION</div>
+      <div class="rv-rule"></div>
+      <div class="rv-role-row"><span class="rv-role">B.Sc. Mathematics Honours (Minor: Computer Science)</span><span class="rv-date">CGPA: 8.8</span></div>
+      <div class="rv-company">University of Delhi &nbsp;|&nbsp; Jul 2019 — May 2022</div>
+
+      <div class="rv-section-title">CERTIFICATION</div>
+      <div class="rv-rule"></div>
+      <div class="rv-role-row"><span class="rv-role">Fellowship in Product Management</span><span class="rv-date">Jan 2024</span></div>
+      <div class="rv-company">NextLeap · Intensive PM programme covering strategy, execution, user research, and case studies</div>
+
+    </div>
+  </div>
+</div>
 
 <!-- Case Study Drawer -->
 <div class="cs-drawer" id="cs-drawer">

@@ -140,6 +140,25 @@ window.addEventListener('scroll', checkFloatingCTA, { passive: true });
 // Also check on page switch
 const origSwitchPage = switchPage;
 
+// ── Resume viewer ────────────────────────
+const resumeViewer = document.getElementById('resume-viewer');
+
+function openResumeViewer() {
+  resumeViewer.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeResumeViewer() {
+  resumeViewer.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('resume-viewer-backdrop').addEventListener('click', closeResumeViewer);
+document.getElementById('resume-viewer-close').addEventListener('click', closeResumeViewer);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && resumeViewer.classList.contains('open')) closeResumeViewer();
+});
+
 // ── Resize handler ───────────────────────
 let resizeTimer;
 window.addEventListener('resize', () => {

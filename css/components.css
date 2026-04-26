@@ -292,3 +292,126 @@ body:not(.intro-active) .content-area {
     cursor: pointer;
   }
 }
+
+/* ═══════════════════════════════════════════
+   RESUME VIEWER — full-screen overlay with iframe
+   ═══════════════════════════════════════════ */
+.resume-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 7000;
+  pointer-events: none;
+}
+.resume-viewer.open { pointer-events: auto; }
+
+.resume-viewer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.resume-viewer.open .resume-viewer-backdrop { opacity: 1; }
+
+.resume-viewer-panel {
+  position: absolute;
+  top: 3vh; left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  width: 92vw;
+  max-width: 860px;
+  height: 92vh;
+  background: var(--bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 40px var(--sh-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.resume-viewer.open .resume-viewer-panel {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.resume-viewer-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+  flex-shrink: 0;
+}
+
+.resume-viewer-close {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: var(--ink-muted);
+  background: none;
+  border: none;
+  cursor: none;
+  transition: color 0.2s;
+}
+.resume-viewer-close:hover { color: var(--red); }
+
+.resume-download-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--red);
+  padding: 7px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: none;
+  transition: filter 0.2s;
+}
+.resume-download-btn:hover { filter: brightness(1.1); }
+
+.resume-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px 48px 60px;
+  font-family: Arial, sans-serif;
+  font-size: 9.5pt;
+  line-height: 1.55;
+  color: #1A1A1A;
+  background: #fff;
+}
+
+.rv-header { text-align: center; margin-bottom: 16px; }
+.rv-name { font-size: 18pt; font-weight: 700; margin-bottom: 4px; }
+.rv-tagline { font-size: 9.5pt; color: #444; margin-bottom: 4px; }
+.rv-contact { font-size: 9.5pt; color: #444; }
+.rv-contact a { color: #C0392B; }
+
+.rv-section-title { font-size: 11pt; font-weight: 700; margin-top: 18px; margin-bottom: 0; }
+.rv-rule { border-bottom: 1.5px solid #C0392B; margin-bottom: 8px; }
+
+.rv-role-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 12px; }
+.rv-role { font-size: 10pt; font-weight: 700; }
+.rv-date { font-size: 9.5pt; color: #555; flex-shrink: 0; }
+.rv-company { font-size: 9.5pt; font-style: italic; color: #444; margin-bottom: 6px; }
+
+.rv-sub { font-size: 9.5pt; font-weight: 700; margin-top: 10px; margin-bottom: 4px; }
+
+.rv-bullets { margin: 0 0 6px 20px; padding: 0; }
+.rv-bullets li { margin-bottom: 3px; font-size: 9.5pt; }
+
+.rv-para { margin: 4px 0 6px; font-size: 9.5pt; }
+.rv-para strong { font-weight: 700; }
+
+@media (max-width: 768px) {
+  .resume-viewer-panel {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    border-radius: 0;
+    max-width: none;
+  }
+  .resume-body { padding: 24px 18px 40px; }
+  .resume-viewer-close { cursor: pointer; }
+  .resume-download-btn { cursor: pointer; font-size: 0.76rem; padding: 6px 12px; }
+  .rv-role-row { flex-direction: column; gap: 0; }
+  .rv-name { font-size: 15pt; }
+}
