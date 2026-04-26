@@ -19,17 +19,12 @@
    Demo page — routing + rendering
    ═══════════════════════════════════════════ */
 
-// Resolve company slug from URL
-// Supports: /demo/zenda, /demo.html?c=zenda, /demo.html#zenda
 function getSlug() {
-  // Clean path: /demo/zenda or /saurabh-portfolio/demo/zenda
   const path = window.location.pathname;
   const match = path.match(/\/demo\/([a-zA-Z0-9_-]+)/);
   if (match) return match[1].toLowerCase();
-  // Query param fallback
   const params = new URLSearchParams(window.location.search);
   if (params.get('c')) return params.get('c').toLowerCase();
-  // Hash fallback
   if (window.location.hash.length > 1) return window.location.hash.slice(1).toLowerCase();
   return null;
 }
@@ -38,12 +33,13 @@ const slug = getSlug();
 const company = slug ? DEMO_COMPANIES[slug] : null;
 const root = document.getElementById('demo-root');
 
-// Get base path for links back to main site
 function getBasePath() {
   const path = window.location.pathname;
-  // If we're at /saurabh-portfolio/demo/x, base is /saurabh-portfolio/
   const idx = path.indexOf('/demo');
-  return idx > 0 ? path.substring(0, idx) + '/' : '/';
+  if (idx > 0) return path.substring(0, idx) + '/';
+  // query param fallback
+  const origin = window.location.origin + window.location.pathname;
+  return origin.replace(/demo\.html.*$/, '');
 }
 const BASE = getBasePath();
 
@@ -52,34 +48,58 @@ function today() {
 }
 
 function wavySVG() {
-  return `<svg class="demo-topbar-line" viewBox="0 0 700 6" preserveAspectRatio="none"><path d="M0 3 Q175 0 350 4 Q525 8 700 2"/></svg>`;
+  return `<svg class="demo-nav-line" viewBox="0 0 700 6" preserveAspectRatio="none"><path d="M0 3 Q175 0 350 4 Q525 8 700 2"/></svg>`;
 }
 
-function topbar(companyName) {
+// ── Fixed nav bar ──
+function navbar(companyName) {
+  if (!companyName) {
+    return `<nav class="demo-nav" id="demo-nav">
+      <div class="demo-nav-inner">
+        <a href="${BASE}" class="demo-nav-back">\u2190 know more about me</a>
+      </div>${wavySVG()}</nav>`;
+  }
   return `
-    <div class="demo-topbar">
-      <a href="${BASE}" class="demo-logo">SK.</a>
-      <div class="demo-prepared">${companyName ? 'prepared for ' + companyName : ''} · ${today()}</div>
-    </div>
-    ${wavySVG()}
+    <nav class="demo-nav" id="demo-nav">
+      <div class="demo-nav-inner">
+        <a href="${BASE}" class="demo-nav-back">\u2190 know more about me</a>
+        <div class="demo-nav-links" id="demo-nav-links">
+          <a href="#sec-research" class="demo-nav-link" data-sec="sec-research">Research</a>
+          <a href="#sec-gaps" class="demo-nav-link" data-sec="sec-gaps">Gaps</a>
+          <a href="#sec-whyme" class="demo-nav-link" data-sec="sec-whyme">Why Me</a>
+          <a href="#sec-demo" class="demo-nav-link" data-sec="sec-demo">Demo</a>
+          <a href="#sec-closing" class="demo-nav-link" data-sec="sec-closing">Closing</a>
+        </div>
+        <button class="demo-nav-toggle" id="demo-nav-toggle" aria-label="Sections">\u2261 sections</button>
+        <div class="demo-nav-dropdown" id="demo-nav-dropdown">
+          <a href="#sec-research" class="demo-nav-dd-link">Research</a>
+          <a href="#sec-gaps" class="demo-nav-dd-link">Gaps</a>
+          <a href="#sec-whyme" class="demo-nav-dd-link">Why Me</a>
+          <a href="#sec-demo" class="demo-nav-dd-link">Demo</a>
+          <a href="#sec-closing" class="demo-nav-dd-link">Closing</a>
+        </div>
+        <div class="demo-prepared">${companyName} \u00B7 ${today()}</div>
+      </div>
+      ${wavySVG()}
+    </nav>
   `;
 }
 
 // ── Coming soon page ──
 if (!company) {
-  document.title = 'Demo — Saurabh Kumar';
+  document.title = 'Demo \u2014 Saurabh Kumar';
   root.innerHTML = `
-    ${topbar(null)}
+    ${navbar(null)}
     <div class="demo-soon">
-      <div class="demo-soon-text">this one's still being crafted.</div>
-      <a href="${BASE}" class="demo-soon-link">← back to portfolio</a>
+      <div class="demo-soon-text">this one\u2019s still being crafted.</div>
+      <a href="${BASE}" class="demo-soon-link">\u2190 back to portfolio</a>
     </div>
   `;
 } else {
   // ── Full demo page ──
-  document.title = `${company.companyName} — Saurabh Kumar`;
+  document.title = `${company.companyName} \u2014 Saurabh Kumar`;
 
-  let html = topbar(company.companyName);
+  let html = navbar(company.companyName);
 
   // Hero
   html += `
@@ -89,9 +109,9 @@ if (!company) {
     </div>
   `;
 
-  // Section 01 — Understand
+  // Section 01 — Research / Understand
   html += `
-    <div class="demo-section" id="sec-understand">
+    <div class="demo-section" id="sec-research">
       <svg class="demo-bracket" viewBox="0 0 18 80" fill="none"><path d="M14 2 C6 2 4 14 4 40 C4 66 6 78 14 78"/></svg>
       <div class="demo-section-num">01</div>
       <div class="demo-section-title">${company.understand.title}</div>
@@ -101,7 +121,7 @@ if (!company) {
 
   // Section 02 — Gaps
   html += `
-    <div class="demo-section">
+    <div class="demo-section" id="sec-gaps">
       <div class="demo-section-num">02</div>
       <div class="demo-section-title">${company.gaps.title}</div>
       ${company.gaps.items.map((g, i) => `
@@ -116,7 +136,7 @@ if (!company) {
 
   // Section 03 — Why me
   html += `
-    <div class="demo-section">
+    <div class="demo-section" id="sec-whyme">
       <div class="demo-section-num">03</div>
       <div class="demo-section-title">${company.whyme.title}</div>
       <div class="demo-compare-header">
@@ -134,7 +154,7 @@ if (!company) {
 
   // Section 04 — Demo
   html += `
-    <div class="demo-section">
+    <div class="demo-section" id="sec-demo">
       <div class="demo-section-num">04</div>
       <div class="demo-section-title">${company.demo.title}</div>
       <div class="demo-section-body" style="margin-bottom:24px;">${company.demo.intro}</div>
@@ -143,9 +163,9 @@ if (!company) {
           <div class="demo-phone-screen" id="phone-screen"></div>
         </div>
         <div class="demo-phone-nav">
-          <button class="demo-phone-btn" id="phone-prev" aria-label="Previous">← prev</button>
+          <button class="demo-phone-btn" id="phone-prev" aria-label="Previous">\u2190 prev</button>
           <span class="demo-phone-counter" id="phone-counter"></span>
-          <button class="demo-phone-btn" id="phone-next" aria-label="Next">next →</button>
+          <button class="demo-phone-btn" id="phone-next" aria-label="Next">next \u2192</button>
         </div>
         <div class="demo-screen-title" id="screen-title"></div>
         <div class="demo-screen-desc" id="screen-desc"></div>
@@ -156,13 +176,13 @@ if (!company) {
   // Section 05 — Closing
   const c = company.closing;
   html += `
-    <div class="demo-closing">
-      <div class="demo-closing-text">"${c.content}"</div>
+    <div class="demo-closing" id="sec-closing">
+      <div class="demo-closing-text">\u201C${c.content}\u201D</div>
       <div class="demo-closing-name">${c.name}</div>
       <div class="demo-closing-links">
         <a href="tel:${c.phone.replace(/\s/g, '')}">${c.phone}</a><br>
         <a href="mailto:${c.email}">${c.email}</a><br>
-        <a href="${c.linkedin}" target="_blank">LinkedIn →</a>
+        <a href="${c.linkedin}" target="_blank">LinkedIn \u2192</a>
       </div>
     </div>
   `;
@@ -190,16 +210,50 @@ if (!company) {
   document.getElementById('phone-next').addEventListener('click', () => {
     if (currentScreen < screens.length - 1) { currentScreen++; renderScreen(); }
   });
-
   renderScreen();
 
   // ── Bracket draw-in on scroll ──
   const bracket = document.querySelector('.demo-bracket');
   if (bracket) {
-    const obs = new IntersectionObserver((entries) => {
+    const bObs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) bracket.classList.add('visible'); });
     }, { threshold: 0.3 });
-    obs.observe(bracket);
+    bObs.observe(bracket);
+  }
+
+  // ── Active section tracking ──
+  const navLinks = document.querySelectorAll('.demo-nav-link');
+  const sections = document.querySelectorAll('.demo-section, .demo-closing');
+
+  const secObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.demo-nav-link[data-sec="${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => { if (s.id) secObs.observe(s); });
+
+  // ── Mobile dropdown toggle ──
+  const toggle = document.getElementById('demo-nav-toggle');
+  const dropdown = document.getElementById('demo-nav-dropdown');
+  if (toggle && dropdown) {
+    toggle.addEventListener('click', () => {
+      dropdown.classList.toggle('open');
+    });
+    // Close on link click
+    dropdown.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => dropdown.classList.remove('open'));
+    });
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
   }
 }
 </script>
