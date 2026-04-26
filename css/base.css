@@ -125,11 +125,14 @@ body::after {
   flex-direction: row;
   align-items: center;
   gap: 4px;
-  background: var(--bg-nav);
+  background: color-mix(in srgb, var(--bg-nav) 75%, transparent);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  backdrop-filter: blur(12px) saturate(1.2);
   padding: 6px 8px;
   border-radius: 14px;
-  box-shadow: 0 4px 20px var(--sh-md), 0 1px 4px var(--sh-xs);
-  transition: background 0.4s, box-shadow 0.4s;
+  border: 1px solid color-mix(in srgb, var(--ink) 6%, transparent);
+  box-shadow: 0 4px 24px var(--sh-md), 0 1px 4px var(--sh-xs);
+  transition: background 0.4s, box-shadow 0.4s, border-color 0.4s;
 }
 
 .tab-btn {

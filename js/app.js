@@ -108,8 +108,7 @@ function runIntro() {
 
   document.body.classList.add('intro-active');
 
-  // Wave 1: 0–1s (doodles), Wave 2: 1.2s (name), Wave 3: 1.9–2.3s (underline+role),
-  // Wave 4: 2.7–3.5s (personality). Last piece lands ~4.2s. Hold, then reveal.
+  // Last piece lands ~4.2s. Short hold, then reveal.
   setTimeout(() => {
     intro.classList.add('done');
     document.body.classList.remove('intro-active');
@@ -118,8 +117,8 @@ function runIntro() {
     setTimeout(() => {
       initMePage();
       intro.remove();
-    }, 700);
-  }, 5200);
+    }, 600);
+  }, 3600);
 }
 
 // ── Boot ─────────────────────────────────
