@@ -1,0 +1,272 @@
+/* ═══════════════════════════════════════════
+   PAGE — JOURNEY (notebook timeline)
+   ═══════════════════════════════════════════ */
+.journey-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 4px;
+}
+
+.journey-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 1.35rem;
+  color: var(--ink-muted);
+  transform: rotate(-0.6deg);
+  margin-bottom: 8px;
+}
+
+.journey-arrow {
+  width: 24px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+.journey-arrow path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.35;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 44px;
+  margin-left: 60px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0; top: 0;
+  width: 6px;
+  height: 100%;
+  overflow: visible;
+}
+.timeline-line path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.2;
+}
+
+.tl-entry {
+  position: relative;
+  margin-bottom: 48px;
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.tl-entry.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tl-pin {
+  position: absolute;
+  left: -52px; top: 8px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 0 3px var(--bg), 0 0 0 4.5px color-mix(in srgb, var(--red) 25%, transparent);
+}
+
+.tl-date {
+  position: absolute;
+  left: -156px; top: 4px;
+  width: 96px;
+  text-align: right;
+  font-family: 'Caveat', cursive;
+  font-size: 0.95rem;
+  color: var(--ink-faint);
+  line-height: 1.3;
+}
+
+.tl-card {
+  background: var(--bg-card);
+  padding: 24px 26px 20px;
+  position: relative;
+  box-shadow: 2px 3px 10px var(--sh-sm);
+  max-width: 600px;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+
+.tl-card-border {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+.tl-card-border path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1;
+  opacity: 0.14;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tl-company {
+  font-family: 'Caveat', cursive;
+  font-size: 1.05rem;
+  color: var(--ink-muted);
+  margin-bottom: 2px;
+}
+
+.tl-role {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.65rem;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.tl-role-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+}
+
+.tl-summary {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  max-width: 520px;
+}
+
+.tl-ladder {
+  margin-bottom: 18px;
+  padding: 10px 0 10px 4px;
+  border-left: 1.5px dashed color-mix(in srgb, var(--ink) 10%, transparent);
+  margin-left: 4px;
+}
+
+.tl-ladder-step {
+  font-family: 'Caveat', cursive;
+  font-size: 1.05rem;
+  color: var(--ink-secondary);
+  padding: 3px 0 3px 14px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.tl-ladder-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.tl-ladder-step::before {
+  content: '\2191';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.tl-ladder-step.current {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
+.tl-shipped-label {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.tl-shipped-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 4px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.84rem;
+  color: var(--ink-detail);
+}
+
+.tl-shipped-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.85rem;
+  color: var(--ink-ghost);
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.tl-shipped-name { flex: 1; }
+
+.tl-read-btn {
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem;
+  color: var(--blue);
+  background: none;
+  border: none;
+  cursor: none;
+  white-space: nowrap;
+  position: relative;
+  padding: 0;
+  flex-shrink: 0;
+}
+.tl-read-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1.5px;
+  background: var(--blue);
+  transition: width 0.3s ease, background 0.3s;
+}
+.tl-read-btn:hover {
+  color: var(--red);
+}
+.tl-read-btn:hover::after {
+  width: 100%;
+  background: var(--red);
+}
+
+.tl-stamp {
+  position: absolute;
+  top: 16px; right: 18px;
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--red);
+  border: 2px solid var(--red);
+  border-radius: 4px;
+  padding: 2px 10px;
+  transform: rotate(6deg);
+  opacity: 0.6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tl-doodle {
+  position: absolute;
+  top: 14px; right: 20px;
+  opacity: 0.35;
+}
+
+@media (max-width: 768px) {
+  .journey-title { font-size: 2.6rem; }
+  .timeline { margin-left: 0; padding-left: 28px; }
+  .tl-date {
+    position: relative;
+    left: 0; top: 0;
+    width: auto;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+  .tl-pin { left: -35px; width: 8px; height: 8px; }
+  .tl-card { padding: 18px 16px 14px; max-width: 100%; }
+  .tl-role { font-size: 1.4rem; }
+  .tl-summary { font-size: 0.84rem; }
+  .tl-shipped-row { font-size: 0.82rem; }
+  .tl-read-btn { cursor: pointer; font-size: 0.85rem; }
+  .tl-stamp { font-size: 0.8rem; top: 12px; right: 12px; }
+  .tl-doodle { display: none; }
+}

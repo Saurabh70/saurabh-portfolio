@@ -1,0 +1,153 @@
+/* ═══════════════════════════════════════════
+   THEME — CSS custom properties
+   Light (default) + Dark mode
+   ═══════════════════════════════════════════ */
+:root {
+  /* Backgrounds */
+  --bg:            #F5F0E6;
+  --bg-card:       #F0EBE0;
+  --bg-nav:        #EDE8DA;
+  --bg-nav-hover:  #E8E2D2;
+
+  /* Text */
+  --ink:           #1A1714;
+  --ink-secondary: #555;
+  --ink-tertiary:  #777;
+  --ink-muted:     #999;
+  --ink-faint:     #aaa;
+  --ink-detail:    #444;
+  --ink-ghost:     #c8c0b0;
+  --ink-sub:       #888;
+
+  /* Accents */
+  --red:           #D4380D;
+  --blue:          #2B4EFF;
+  --green:         #2e7d32;
+
+  /* Surfaces */
+  --dot-grid:      #c8c0b0;
+  --margin-line:   #e0c8c8;
+  --separator:     #ccc;
+
+  /* Sticky notes */
+  --sticky-yellow: #FFF9C4;
+  --sticky-green:  #C8E6C9;
+  --sticky-pink:   #F8BBD0;
+  --sticky-orange: #FFE0B2;
+  --sticky-blue:   #BBDEFB;
+  --sticky-tape:   rgba(0,0,0,0.04);
+
+  /* Shadows */
+  --sh-xs:         rgba(0,0,0,0.06);
+  --sh-sm:         rgba(0,0,0,0.08);
+  --sh-md:         rgba(0,0,0,0.1);
+  --sh-lg:         rgba(0,0,0,0.12);
+
+  /* Misc */
+  --ink-trail:     rgba(26, 23, 20, 0.08);
+  --overlay:       rgba(26, 23, 20, 0.18);
+  --grain-opacity: 0.03;
+  --grid-opacity:  0.35;
+  --cursor-fill:   #1A1714;
+}
+
+/* ═══════════════════════════════════════════
+   DARK MODE
+   ═══════════════════════════════════════════ */
+[data-theme="dark"] {
+  --bg:            #1C1A17;
+  --bg-card:       #28251F;
+  --bg-nav:        #242120;
+  --bg-nav-hover:  #302D28;
+
+  --ink:           #E0DAC8;
+  --ink-secondary: #A8A090;
+  --ink-tertiary:  #8A8478;
+  --ink-muted:     #7A756A;
+  --ink-faint:     #6A655B;
+  --ink-detail:    #B8B0A0;
+  --ink-ghost:     #4A4540;
+  --ink-sub:       #8A8478;
+
+  --red:           #E8613A;
+  --blue:          #6B8AFF;
+  --green:         #5CB85C;
+
+  --dot-grid:      #3A3530;
+  --margin-line:   #3A3030;
+  --separator:     #3A3530;
+
+  --sticky-yellow: #3D3A20;
+  --sticky-green:  #1E3520;
+  --sticky-pink:   #3D1E2A;
+  --sticky-orange: #3D2E15;
+  --sticky-blue:   #1A2E3D;
+  --sticky-tape:   rgba(255,255,255,0.04);
+
+  --sh-xs:         rgba(0,0,0,0.25);
+  --sh-sm:         rgba(0,0,0,0.3);
+  --sh-md:         rgba(0,0,0,0.35);
+  --sh-lg:         rgba(0,0,0,0.4);
+
+  --ink-trail:     rgba(224, 218, 200, 0.06);
+  --overlay:       rgba(0, 0, 0, 0.45);
+  --grain-opacity: 0.015;
+  --grid-opacity:  0.18;
+  --cursor-fill:   #E0DAC8;
+}
+
+/* ═══════════════════════════════════════════
+   THEME TOGGLE BUTTON
+   ═══════════════════════════════════════════ */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 2000;
+  background: var(--bg-nav);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  box-shadow: 0 2px 8px var(--sh-xs);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.theme-toggle:hover {
+  background: var(--bg-nav-hover);
+  box-shadow: 0 3px 12px var(--sh-sm);
+}
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+.theme-toggle:hover svg {
+  transform: rotate(20deg);
+}
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  position: absolute;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Light mode: show moon, hide sun */
+.theme-toggle .icon-sun  { opacity: 0; transform: scale(0.7) rotate(-30deg); }
+.theme-toggle .icon-moon { opacity: 1; transform: scale(1) rotate(0); }
+
+/* Dark mode: show sun, hide moon */
+[data-theme="dark"] .theme-toggle .icon-sun  { opacity: 1; transform: scale(1) rotate(0); }
+[data-theme="dark"] .theme-toggle .icon-moon { opacity: 0; transform: scale(0.7) rotate(30deg); }
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    cursor: pointer;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+  }
+}

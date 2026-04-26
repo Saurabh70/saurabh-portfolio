@@ -1,0 +1,177 @@
+/* ═══════════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  cursor: none;
+  -webkit-text-size-adjust: 100%;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ═══════════════════════════════════════════
+   DOT GRID + PAPER GRAIN
+   ═══════════════════════════════════════════ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--dot-grid) 0.7px, transparent 0.7px);
+  background-size: 24px 24px;
+  opacity: var(--grid-opacity);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.4s;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  opacity: var(--grain-opacity);
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  transition: opacity 0.4s;
+}
+
+/* ═══════════════════════════════════════════
+   TYPOGRAPHY
+   ═══════════════════════════════════════════ */
+.font-hand { font-family: 'Caveat', cursive; }
+.font-display { font-family: 'Bebas Neue', sans-serif; }
+.font-body { font-family: 'DM Sans', sans-serif; }
+
+/* ═══════════════════════════════════════════
+   CUSTOM CURSOR
+   ═══════════════════════════════════════════ */
+#ink-cursor {
+  position: fixed;
+  width: 8px;
+  height: 12px;
+  pointer-events: none;
+  z-index: 100000;
+  transform: translate(-50%, -100%);
+  transition: opacity 0.15s;
+}
+#ink-cursor svg { width: 100%; height: 100%; }
+#ink-cursor path { fill: var(--cursor-fill); transition: fill 0.4s; }
+
+.ink-trail {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--ink-trail);
+  pointer-events: none;
+  z-index: 99999;
+  animation: trailFade 1.2s ease-out forwards;
+}
+@keyframes trailFade {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.3); }
+}
+
+/* ═══════════════════════════════════════════
+   LAYOUT
+   ═══════════════════════════════════════════ */
+.content-area {
+  flex: 1;
+  margin: 0 auto;
+  padding: 40px 60px 120px;
+  max-width: 960px;
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+}
+
+/* ═══════════════════════════════════════════
+   PAGE TRANSITIONS
+   ═══════════════════════════════════════════ */
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+  animation: pageIn 0.45s ease both;
+}
+@keyframes pageIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════
+   NOTEBOOK TABS — bottom bar
+   ═══════════════════════════════════════════ */
+.notebook-tabs {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-nav);
+  padding: 6px 8px;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px var(--sh-md), 0 1px 4px var(--sh-xs);
+  transition: background 0.4s, box-shadow 0.4s;
+}
+
+.tab-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 10px 20px;
+  cursor: none;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  text-align: center;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn:hover {
+  background: var(--bg-nav-hover);
+}
+
+.tab-btn.active {
+  background: var(--bg);
+  border-bottom-color: var(--red);
+  font-weight: 700;
+  box-shadow: 0 2px 8px var(--sh-xs);
+}
+
+.tab-btn .tab-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.65rem;
+  color: var(--red);
+  display: block;
+  letter-spacing: 1px;
+  margin-bottom: 1px;
+  line-height: 1;
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
