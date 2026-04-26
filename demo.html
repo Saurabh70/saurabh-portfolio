@@ -47,40 +47,31 @@ function today() {
   return new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 }
 
-function wavySVG() {
-  return `<svg class="demo-nav-line" viewBox="0 0 700 6" preserveAspectRatio="none"><path d="M0 3 Q175 0 350 4 Q525 8 700 2"/></svg>`;
-}
-
-// ── Fixed nav bar ──
+// ── Bottom floating nav bar (matches portfolio) ──
 function navbar(companyName) {
   if (!companyName) {
     return `<nav class="demo-nav" id="demo-nav">
-      <div class="demo-nav-inner">
-        <a href="${BASE}" class="demo-nav-back">\u2190 know more about me</a>
-      </div>${wavySVG()}</nav>`;
+      <a href="${BASE}" class="demo-nav-back">\u2190 know more about me</a>
+    </nav>`;
   }
   return `
     <nav class="demo-nav" id="demo-nav">
-      <div class="demo-nav-inner">
-        <a href="${BASE}" class="demo-nav-back">\u2190 know more about me</a>
-        <div class="demo-nav-links" id="demo-nav-links">
-          <a href="#sec-research" class="demo-nav-link" data-sec="sec-research">Research</a>
-          <a href="#sec-gaps" class="demo-nav-link" data-sec="sec-gaps">Gaps</a>
-          <a href="#sec-whyme" class="demo-nav-link" data-sec="sec-whyme">Why Me</a>
-          <a href="#sec-demo" class="demo-nav-link" data-sec="sec-demo">Demo</a>
-          <a href="#sec-closing" class="demo-nav-link" data-sec="sec-closing">Closing</a>
-        </div>
-        <button class="demo-nav-toggle" id="demo-nav-toggle" aria-label="Sections">\u2261 sections</button>
-        <div class="demo-nav-dropdown" id="demo-nav-dropdown">
-          <a href="#sec-research" class="demo-nav-dd-link">Research</a>
-          <a href="#sec-gaps" class="demo-nav-dd-link">Gaps</a>
-          <a href="#sec-whyme" class="demo-nav-dd-link">Why Me</a>
-          <a href="#sec-demo" class="demo-nav-dd-link">Demo</a>
-          <a href="#sec-closing" class="demo-nav-dd-link">Closing</a>
-        </div>
-        <div class="demo-prepared">${companyName} \u00B7 ${today()}</div>
+      <a href="${BASE}" class="demo-nav-back">\u2190 Me</a>
+      <div class="demo-nav-links" id="demo-nav-links">
+        <a href="#sec-research" class="demo-nav-link" data-sec="sec-research">Research</a>
+        <a href="#sec-gaps" class="demo-nav-link" data-sec="sec-gaps">Gaps</a>
+        <a href="#sec-whyme" class="demo-nav-link" data-sec="sec-whyme">Why Me</a>
+        <a href="#sec-demo" class="demo-nav-link" data-sec="sec-demo">Demo</a>
+        <a href="#sec-closing" class="demo-nav-link" data-sec="sec-closing">Closing</a>
       </div>
-      ${wavySVG()}
+      <button class="demo-nav-toggle" id="demo-nav-toggle" aria-label="Sections">\u2261 sections</button>
+      <div class="demo-nav-dropdown" id="demo-nav-dropdown">
+        <a href="#sec-research" class="demo-nav-dd-link">Research</a>
+        <a href="#sec-gaps" class="demo-nav-dd-link">Gaps</a>
+        <a href="#sec-whyme" class="demo-nav-dd-link">Why Me</a>
+        <a href="#sec-demo" class="demo-nav-dd-link">Demo</a>
+        <a href="#sec-closing" class="demo-nav-dd-link">Closing</a>
+      </div>
     </nav>
   `;
 }

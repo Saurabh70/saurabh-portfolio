@@ -7,10 +7,10 @@ const DEMO_COMPANIES = {
   "zenda": {
     companyName: "Zenda",
     role: "Product Manager",
-    headline: "What I\u2019d build at Zenda \u2014 and why I think I can.",
+    headline: "What I\u2019d build at Zenda.",
     subline: "A product perspective from Saurabh Kumar \u00B7 Prepared for Zenda\u2019s PM role",
 
-    intro: `This isn\u2019t a cover letter. I don\u2019t think cover letters tell you much about how a PM thinks.<br><br>This is me showing my work \u2014 what I found when I researched Zenda, what I think the real product problems are, why I believe my experience maps to them, and one idea I\u2019ve prototyped to show how I\u2019d approach building for your users.<br><br>If this is how I think before I\u2019ve joined, imagine what I\u2019d do once I\u2019m inside.`,
+    intro: `I wanted to go beyond a cover letter and actually show how I think about product problems.<br><br>So I spent time researching Zenda \u2014 reading reviews, understanding the business model, mapping out what parents actually experience. This document walks through what I found, where I think the biggest opportunities are, and one idea I\u2019ve prototyped to show my approach.<br><br>I hope it gives you a useful sense of how I work.`,
 
     understand: {
       title: "What I researched about Zenda",
