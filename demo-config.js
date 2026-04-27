@@ -538,6 +538,339 @@ const DEMO_COMPANIES = {
       email: "mr.saurabh.kumar408@gmail.com",
       linkedin: "https://www.linkedin.com/in/saurabh-kumar-workhard/"
     }
+  },
+
+  "xoxoday": {
+    companyName: "Xoxoday",
+    role: "Product Manager",
+    theme: "enterprise",
+    headline: "What I’d build at Xoxoday’s enterprise loyalty product — and why execution is the real opportunity.",
+    subline: "A product perspective from Saurabh Kumar · Prepared for the PM role at Xoxoday",
+
+    intro: `Not a cover letter. This is me showing how I think about your product — what I found when I researched Xoxoday and Loyalife, where the real gaps are, why my experience fits this role, and one idea I built to show how I would solve a real product problem.<br><br><div style="display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;background:#F9F9FB;border:1px solid #E5E5EC;border-radius:12px;padding:14px 18px;margin-top:8px;font-size:14px;line-height:1.4;font-family:'Inter',system-ui,sans-serif;"><div style="font-weight:700;color:#1A1A2E;">Saurabh Kumar</div><a href="tel:+919369095275" style="color:#FF6B35;text-decoration:none;font-weight:500;">+91 93690 95275</a><a href="mailto:mr.saurabh.kumar408@gmail.com" style="color:#FF6B35;text-decoration:none;font-weight:500;">mr.saurabh.kumar408@gmail.com</a><a href="https://www.linkedin.com/in/saurabh-kumar-workhard/" target="_blank" style="color:#FF6B35;text-decoration:none;font-weight:500;">LinkedIn →</a></div>`,
+
+    understand: {
+      title: "What I researched about Xoxoday",
+      content: `Xoxoday runs rewards, incentives, and loyalty programs for <strong>5,000+ companies worldwide</strong> — including Freshworks, Infosys, Capgemini, AT&T, and H&M — with $1B+ annual GMV and 250+ integrations. That’s serious scale for a product most end users never know they’re using. The rewards just reach their inbox.<br><br>The enterprise loyalty product — <strong>Loyalife</strong> — is the most complex and highest-value part of the suite. It’s an AI-powered platform that helps enterprises create, manage, and grow omnichannel loyalty programs by connecting with CRM, POS, ERP, and marketing tools through APIs.<br><br>The product has strong infrastructure. Real-time analytics, custom dashboards, personalization, and a reward marketplace with 10M+ options across 100+ countries. <em>The base is strong. The gap is in the experience layer</em> — how enterprise customers actually set up, manage, and measure loyalty programs every day.<br><br>Loyalife is already recognized in the market. Validation is there. What’s missing is making the product as easy to use as it is powerful on paper. <strong>That’s the PM job.</strong>`
+    },
+
+    gaps: {
+      title: "The gaps I found",
+      intro: "I read G2, Gartner, Capterra, and SoftwareSuggest reviews carefully — focusing on enterprise admin users, not end users.",
+      items: [
+        {
+          title: "Reporting isn’t deep enough for enterprise decision-making",
+          content: `Many reviewers said reporting isn’t detailed enough. They can’t properly understand campaign performance with the current reports.<br><br>This is a major gap. Clients running loyalty programs for millions of users need to know which tiers work, which rewards drive repeat behavior, and where users drop off. <em>If reporting can’t answer these questions, the product is missing its core promise.</em>`
+        },
+        {
+          title: "Reward delivery has reliability problems",
+          content: `One reviewer said rewards sometimes stay in “pending” for days, with no visibility on resolution or whether an item was removed from the catalogue.<br><br>In loyalty programs, a reward that doesn’t arrive on time is a broken promise to the customer. That damages trust in the whole program.`
+        },
+        {
+          title: "Support breaks down on billing and invoicing",
+          content: `One enterprise user said they needed 3–5 attempts to get the correct invoice in the right currency, and later communication stopped.<br><br>Enterprise clients have strict finance processes. Billing mistakes aren’t small issues — they create business risk.`
+        },
+        {
+          title: "Complexity of setup isn’t matched by ease of use",
+          content: `The platform is powerful — tiers, accrual rules, gamification, multi-currency, multi-region. But power without usability means clients depend too much on the implementation team.<br><br>Every change that needs a support ticket instead of self-serve tools creates friction, slows adoption, and increases churn risk.`
+        }
+      ]
+    },
+
+    whyme: {
+      title: "Why I think I’m a good fit",
+      intro: "",
+      rows: [
+        {
+          problem: "Enterprise client complexity",
+          mywork: "I’ve built and managed product features serving 100+ enterprise clients at the same time at YourDOST — each with different needs and setups. I understand the difference between building for one user and building for an admin managing 50,000 employees. The org tiering and slot personalization system I built used the same thinking."
+        },
+        {
+          problem: "Reporting gaps",
+          mywork: "I implemented PostHog as the analytics system at YourDOST and built funnels, dashboards, and retention metrics from scratch. Xoxoday’s reporting gap is a problem I’ve solved in a simpler form before. Enterprise users don’t just need numbers. They need answers to “why did this happen?”"
+        },
+        {
+          problem: "Execution ownership",
+          mywork: "The JD says this role needs someone close to execution, not just planning. That’s how I work. When the senior PM left YourDOST, I didn’t just plan — I ran standups, reviewed QA, removed blockers, and owned releases. I don’t throw specs and disappear."
+        },
+        {
+          problem: "Reliability and delivery problems",
+          mywork: "I replaced 1,420 hours per month of manual support with automation and reduced bug resolution SLA from 72 hours to 12. I also fixed a broken release process that caused regressions. Xoxoday’s delivery and support issues are execution problems — the kind I’ve solved before."
+        },
+        {
+          problem: "Honest gap — enterprise SaaS and loyalty domain",
+          mywork: "I haven’t worked directly in SaaS or loyalty. My enterprise experience is in healthtech. But the core PM skills — configuration design, admin UX, reporting, and client success loops — transfer directly. I can learn the loyalty domain fast. The execution ability is already there."
+        }
+      ]
+    },
+
+    demo: {
+      title: "The Demo — Loyalty Program Health Dashboard",
+      intro: `<strong>The idea in one line:</strong> Enterprise clients shouldn’t need to call Xoxoday to know if their loyalty program is working.<br><br><strong>The problem it solves:</strong> Today an enterprise admin has to collect data from many places — redemption reports, tier analytics, campaign results — and still can’t answer the main question: <em>is this program building loyalty, or just giving away points?</em><br><br>The Health Dashboard gives one place to see what matters most — and tells them what action to take.<br><br><strong>1 — Program Health Score.</strong> A single score from 0–100 based on active member rate, redemption rate, tier progression rate, reward delivery success rate, and repeat engagement rate. Not a vanity metric — a diagnostic tool. If the score drops, the dashboard shows what dropped and why, in plain English: “Your redemption rate dropped 12% this month. Gift cards had 3 fulfilment delays. Here’s how to fix it.”<br><br><strong>2 — Campaign Performance Drill-down.</strong> Break campaign performance by tier, geography, reward type, and member segment in one view. No exporting CSVs. No pivot tables. Ask: “Which reward drove the most repeat purchases from Gold tier members in Q3?” — get the answer in two clicks.<br><br><strong>3 — At-risk Member Alerts.</strong> Identify members likely to churn — unused points expiring, no activity in 60+ days, tier downgrade coming soon. The dashboard turns this into actions: “2,340 members will drop from Gold to Silver in the next 30 days. Send a targeted campaign?” One click to launch.<br><br><strong>Why this matters for Xoxoday’s business:</strong> Enterprise clients renew when they can prove ROI internally. Right now that’s harder than it should be. This dashboard gives them proof of value — which means they renew, expand, and refer others. <em>The product becomes a retention tool for Xoxoday too.</em>`,
+      screens: [
+        {
+          id: 1,
+          title: "Dashboard Overview",
+          description: "One score that tells an enterprise admin if their program is working — at a glance",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#1A1A2E;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <div>
+                <div style="font-size:10px;color:#888;font-weight:500;">Loyalife · Acme Corp</div>
+                <div style="font-weight:700;font-size:14px;letter-spacing:-0.01em;">Program Health</div>
+              </div>
+              <div style="font-size:10px;color:#888;background:#F5F5F8;padding:4px 8px;border-radius:6px;font-weight:500;">Last 30d</div>
+            </div>
+            <div style="background:#1A1A2E;border-radius:14px;padding:16px;margin-bottom:12px;color:#fff;">
+              <div style="font-size:9px;color:#FF6B35;font-weight:700;letter-spacing:1.5px;margin-bottom:6px;">HEALTH SCORE</div>
+              <div style="display:flex;align-items:baseline;gap:6px;">
+                <div style="font-weight:800;font-size:42px;line-height:1;letter-spacing:-0.02em;">78</div>
+                <div style="font-size:14px;color:#9999AA;">/100</div>
+                <div style="margin-left:auto;font-size:11px;color:#FF6B35;font-weight:600;">▼ 4 pts</div>
+              </div>
+              <div style="font-size:11px;color:#A0A0B0;margin-top:8px;">vs last month · industry avg 72</div>
+              <div style="margin-top:12px;height:36px;background:linear-gradient(180deg,rgba(255,107,53,0.15) 0%,rgba(255,107,53,0) 100%);border-radius:6px;">
+                <svg width="100%" height="100%" viewBox="0 0 200 36" preserveAspectRatio="none" style="display:block;"><polyline points="0,12 25,8 50,14 75,10 100,16 125,12 150,18 175,16 200,22" fill="none" stroke="#FF6B35" stroke-width="2"/></svg>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+              <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:10px;">
+                <div style="font-size:9px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:4px;">Active</div>
+                <div style="font-weight:700;font-size:15px;">62%</div>
+                <div style="font-size:10px;color:#0AA970;font-weight:600;margin-top:2px;">▲ 3.2%</div>
+              </div>
+              <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:10px;">
+                <div style="font-size:9px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:4px;">Redemption</div>
+                <div style="font-weight:700;font-size:15px;">41%</div>
+                <div style="font-size:10px;color:#FF6B35;font-weight:600;margin-top:2px;">▼ 12%</div>
+              </div>
+              <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:10px;">
+                <div style="font-size:9px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:4px;">Tier ↑</div>
+                <div style="font-weight:700;font-size:15px;">8.4%</div>
+                <div style="font-size:10px;color:#0AA970;font-weight:600;margin-top:2px;">▲ 1.1%</div>
+              </div>
+              <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:10px;">
+                <div style="font-size:9px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:4px;">Delivery</div>
+                <div style="font-weight:700;font-size:15px;">96.8%</div>
+                <div style="font-size:10px;color:#FF6B35;font-weight:600;margin-top:2px;">▼ 2.1%</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#FF6B35 0%,#FF8C42 100%);border-radius:12px;padding:12px;color:#fff;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;margin-bottom:6px;opacity:0.95;">⚡ AI INSIGHT</div>
+              <div style="font-size:12px;line-height:1.5;">Redemption dropped 12%. 3 fulfilment delays on gift cards. <strong>Tap to see fix.</strong></div>
+            </div>
+          </div>`
+        },
+        {
+          id: 2,
+          title: "Score Breakdown",
+          description: "Five factors behind the score — see exactly what dropped and where",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#1A1A2E;">
+            <div style="font-size:11px;color:#FF6B35;font-weight:600;margin-bottom:6px;">← Back</div>
+            <div style="font-weight:700;font-size:16px;margin-bottom:2px;letter-spacing:-0.01em;">Score breakdown</div>
+            <div style="font-size:11px;color:#888;margin-bottom:14px;">Acme Corp · 30 days</div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:12px;margin-bottom:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+                <div style="font-weight:600;font-size:12px;">Active member rate</div>
+                <div style="font-weight:700;font-size:13px;color:#0AA970;">82</div>
+              </div>
+              <div style="background:#F0F0F4;border-radius:3px;height:5px;"><div style="background:#0AA970;height:5px;border-radius:3px;width:82%;"></div></div>
+            </div>
+            <div style="background:#fff;border:1px solid #FFD8C4;border-radius:10px;padding:12px;margin-bottom:8px;box-shadow:0 0 0 2px rgba(255,107,53,0.08);">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+                <div style="font-weight:600;font-size:12px;color:#1A1A2E;">Redemption rate <span style="color:#FF6B35;font-size:10px;">▼ 12</span></div>
+                <div style="font-weight:700;font-size:13px;color:#FF6B35;">52</div>
+              </div>
+              <div style="background:#F0F0F4;border-radius:3px;height:5px;margin-bottom:6px;"><div style="background:#FF6B35;height:5px;border-radius:3px;width:52%;"></div></div>
+              <div style="font-size:10px;color:#888;">Was 64 last month</div>
+            </div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:12px;margin-bottom:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+                <div style="font-weight:600;font-size:12px;">Tier progression</div>
+                <div style="font-weight:700;font-size:13px;color:#0AA970;">76</div>
+              </div>
+              <div style="background:#F0F0F4;border-radius:3px;height:5px;"><div style="background:#0AA970;height:5px;border-radius:3px;width:76%;"></div></div>
+            </div>
+            <div style="background:#fff;border:1px solid #FFD8C4;border-radius:10px;padding:12px;margin-bottom:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+                <div style="font-weight:600;font-size:12px;">Reward delivery <span style="color:#FF6B35;font-size:10px;">▼</span></div>
+                <div style="font-weight:700;font-size:13px;color:#FF6B35;">68</div>
+              </div>
+              <div style="background:#F0F0F4;border-radius:3px;height:5px;margin-bottom:6px;"><div style="background:#FF6B35;height:5px;border-radius:3px;width:68%;"></div></div>
+              <div style="font-size:10px;color:#888;">3 fulfilment delays</div>
+            </div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:12px;margin-bottom:14px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+                <div style="font-weight:600;font-size:12px;">Repeat engagement</div>
+                <div style="font-weight:700;font-size:13px;color:#0AA970;">88</div>
+              </div>
+              <div style="background:#F0F0F4;border-radius:3px;height:5px;"><div style="background:#0AA970;height:5px;border-radius:3px;width:88%;"></div></div>
+            </div>
+            <div style="background:#FFF4ED;border-radius:10px;padding:11px 12px;text-align:center;font-size:11px;color:#FF6B35;font-weight:700;">Open AI Insight →</div>
+          </div>`
+        },
+        {
+          id: 3,
+          title: "AI Insight",
+          description: "Plain-English diagnosis with a recommended fix — not a chart, an answer",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#1A1A2E;">
+            <div style="font-size:11px;color:#FF6B35;font-weight:600;margin-bottom:6px;">← Back</div>
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:14px;">
+              <div style="background:#FF6B35;color:#fff;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;letter-spacing:1px;">AI INSIGHT</div>
+              <div style="font-size:10px;color:#888;">Generated 2 mins ago</div>
+            </div>
+            <div style="font-weight:700;font-size:16px;line-height:1.4;margin-bottom:14px;letter-spacing:-0.01em;">Why your redemption rate dropped 12%</div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:14px;margin-bottom:10px;">
+              <div style="font-size:9px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:8px;">DIAGNOSIS</div>
+              <div style="font-size:12px;line-height:1.6;color:#4A4A5A;">3 of your top-redeemed gift card brands had fulfilment delays of 24–72 hrs in the last 30 days. <strong style="color:#1A1A2E;">Amazon (1,240 pending), Starbucks (380), Flipkart (210).</strong></div>
+            </div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:14px;margin-bottom:10px;">
+              <div style="font-size:9px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:8px;">IMPACT</div>
+              <div style="font-size:12px;line-height:1.6;color:#4A4A5A;">Members who experience delivery delays redeem <strong style="color:#1A1A2E;">37% less</strong> in the following 30 days. Repeat redemption likelihood drops by half.</div>
+            </div>
+            <div style="background:#1A1A2E;border-radius:10px;padding:14px;color:#fff;">
+              <div style="font-size:9px;color:#FF6B35;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:8px;">RECOMMENDED FIX</div>
+              <div style="font-size:12px;line-height:1.6;color:#D5D5E0;margin-bottom:10px;">Switch the 1,830 pending orders to backup vendors with <strong style="color:#fff;">98%+ SLA</strong>. Estimated recovery: 4–6 days. Score lift: +3 to +5 pts.</div>
+              <div style="background:#FF6B35;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:600;font-size:12px;">Apply Recommended Fix</div>
+            </div>
+          </div>`
+        },
+        {
+          id: 4,
+          title: "Campaign Drill-down",
+          description: "Slice campaign performance by tier, region, reward type — without exporting a CSV",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#1A1A2E;">
+            <div style="font-weight:700;font-size:16px;margin-bottom:2px;letter-spacing:-0.01em;">Campaign drill-down</div>
+            <div style="font-size:11px;color:#888;margin-bottom:12px;">Q3 · Acme Corp</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;">
+              <div style="background:#1A1A2E;color:#fff;padding:5px 10px;border-radius:14px;font-size:11px;font-weight:600;">Tier: Gold ✕</div>
+              <div style="background:#1A1A2E;color:#fff;padding:5px 10px;border-radius:14px;font-size:11px;font-weight:600;">Region: APAC ✕</div>
+              <div style="background:#fff;border:1px solid #E5E5EC;color:#4A4A5A;padding:5px 10px;border-radius:14px;font-size:11px;font-weight:500;">+ Filter</div>
+            </div>
+            <div style="background:#FFF4ED;border-radius:10px;padding:11px 12px;margin-bottom:14px;">
+              <div style="font-size:9px;color:#FF6B35;font-weight:700;letter-spacing:1.2px;margin-bottom:4px;">QUERY</div>
+              <div style="font-size:12px;line-height:1.5;color:#1A1A2E;">Which reward drove the most repeat purchases from Gold tier in APAC?</div>
+            </div>
+            <div style="font-size:9px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:8px;">TOP REWARDS</div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:12px;margin-bottom:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                <div style="font-weight:600;font-size:12px;">Amazon Gift Card</div>
+                <div style="font-size:11px;color:#0AA970;font-weight:700;">+24% repeat</div>
+              </div>
+              <div style="font-size:10px;color:#888;">3,420 redemptions · ₹68L value</div>
+              <div style="background:#F0F0F4;border-radius:3px;height:5px;margin-top:8px;"><div style="background:#FF6B35;height:5px;border-radius:3px;width:90%;"></div></div>
+            </div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:12px;margin-bottom:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                <div style="font-weight:600;font-size:12px;">Travel Voucher</div>
+                <div style="font-size:11px;color:#0AA970;font-weight:700;">+18% repeat</div>
+              </div>
+              <div style="font-size:10px;color:#888;">1,240 redemptions · ₹42L value</div>
+              <div style="background:#F0F0F4;border-radius:3px;height:5px;margin-top:8px;"><div style="background:#FF6B35;height:5px;border-radius:3px;width:62%;"></div></div>
+            </div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:12px;margin-bottom:14px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                <div style="font-weight:600;font-size:12px;">Premium Subscription</div>
+                <div style="font-size:11px;color:#0AA970;font-weight:700;">+11% repeat</div>
+              </div>
+              <div style="font-size:10px;color:#888;">820 redemptions · ₹18L value</div>
+              <div style="background:#F0F0F4;border-radius:3px;height:5px;margin-top:8px;"><div style="background:#FF6B35;height:5px;border-radius:3px;width:38%;"></div></div>
+            </div>
+            <div style="background:#fff;border:1px solid #E5E5EC;text-align:center;padding:10px;border-radius:8px;font-weight:600;font-size:12px;color:#1A1A2E;">Export to CSV</div>
+          </div>`
+        },
+        {
+          id: 5,
+          title: "At-Risk Members",
+          description: "Predicted churn — surfaced before the program loses members or money",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#1A1A2E;">
+            <div style="font-weight:700;font-size:16px;margin-bottom:2px;letter-spacing:-0.01em;">At-risk members</div>
+            <div style="font-size:11px;color:#888;margin-bottom:14px;">Predicted churn · next 30 days</div>
+            <div style="background:linear-gradient(135deg,#FF6B35 0%,#FF8C42 100%);border-radius:14px;padding:16px;color:#fff;margin-bottom:12px;box-shadow:0 6px 18px rgba(255,107,53,0.22);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;opacity:0.95;margin-bottom:6px;">⚠ ALERT</div>
+              <div style="font-weight:700;font-size:18px;line-height:1.3;margin-bottom:6px;letter-spacing:-0.01em;">2,340 Gold members will drop to Silver in 30 days.</div>
+              <div style="font-size:11px;opacity:0.9;">Lost projected GMV: <strong>₹14L</strong></div>
+            </div>
+            <div style="font-size:9px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:8px;">OTHER SIGNALS</div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:12px;margin-bottom:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:start;">
+                <div>
+                  <div style="font-weight:600;font-size:12px;margin-bottom:2px;">Points expiring soon</div>
+                  <div style="font-size:10px;color:#888;">4,820 members · ₹3.2L unredeemed</div>
+                </div>
+                <div style="background:#FFF4ED;color:#FF6B35;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;">High</div>
+              </div>
+            </div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:12px;margin-bottom:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:start;">
+                <div>
+                  <div style="font-weight:600;font-size:12px;margin-bottom:2px;">Inactive 60+ days</div>
+                  <div style="font-size:10px;color:#888;">7,120 members · last seen Feb</div>
+                </div>
+                <div style="background:#FFF4ED;color:#FF6B35;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;">High</div>
+              </div>
+            </div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:10px;padding:12px;margin-bottom:14px;">
+              <div style="display:flex;justify-content:space-between;align-items:start;">
+                <div>
+                  <div style="font-weight:600;font-size:12px;margin-bottom:2px;">Low engagement Gold</div>
+                  <div style="font-size:10px;color:#888;">980 members · 1 redemption in Q3</div>
+                </div>
+                <div style="background:#F5F5F8;color:#888;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;">Med</div>
+              </div>
+            </div>
+            <div style="background:#1A1A2E;color:#fff;text-align:center;padding:12px;border-radius:10px;font-weight:600;font-size:13px;">Launch retention campaign →</div>
+          </div>`
+        },
+        {
+          id: 6,
+          title: "Launch Campaign",
+          description: "One-click retention — pre-built segment, offer, and projected GMV impact",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#1A1A2E;">
+            <div style="font-size:11px;color:#FF6B35;font-weight:600;margin-bottom:6px;">← At-risk</div>
+            <div style="font-weight:700;font-size:16px;margin-bottom:2px;letter-spacing:-0.01em;">Launch campaign</div>
+            <div style="font-size:11px;color:#888;margin-bottom:14px;">Pre-built for this segment</div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:12px;padding:14px;margin-bottom:12px;">
+              <div style="font-size:9px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:6px;">SEGMENT</div>
+              <div style="font-weight:700;font-size:14px;margin-bottom:2px;">Gold → Silver risk</div>
+              <div style="font-size:11px;color:#888;margin-bottom:10px;">2,340 members · APAC + EU</div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                <div style="background:#FFF4ED;color:#FF6B35;padding:3px 8px;border-radius:6px;font-size:10px;font-weight:600;">Tier: Gold</div>
+                <div style="background:#FFF4ED;color:#FF6B35;padding:3px 8px;border-radius:6px;font-size:10px;font-weight:600;">Activity ↓</div>
+                <div style="background:#FFF4ED;color:#FF6B35;padding:3px 8px;border-radius:6px;font-size:10px;font-weight:600;">30-day window</div>
+              </div>
+            </div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:12px;padding:14px;margin-bottom:12px;">
+              <div style="font-size:9px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:6px;">OFFER</div>
+              <div style="font-weight:700;font-size:13px;margin-bottom:6px;">Bonus 500 points on next redemption</div>
+              <div style="font-size:11px;color:#4A4A5A;line-height:1.5;">Triggers when member uses any reward in the next 14 days. Helps maintain Gold-tier activity threshold.</div>
+            </div>
+            <div style="background:#fff;border:1px solid #E5E5EC;border-radius:12px;padding:14px;margin-bottom:14px;">
+              <div style="font-size:9px;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:6px;">PROJECTED IMPACT</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;">
+                <div>
+                  <div style="font-weight:700;font-size:18px;color:#0AA970;">+62%</div>
+                  <div style="font-size:10px;color:#888;">tier retention</div>
+                </div>
+                <div>
+                  <div style="font-weight:700;font-size:18px;color:#0AA970;">₹9.4L</div>
+                  <div style="font-size:10px;color:#888;">GMV saved</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:#FF6B35;color:#fff;text-align:center;padding:13px;border-radius:10px;font-weight:700;font-size:13px;margin-bottom:8px;">Launch campaign</div>
+            <div style="text-align:center;font-size:11px;color:#888;">Customize before sending</div>
+          </div>`
+        }
+      ]
+    },
+
+    closing: {
+      content: "I’ve spent three years building products where the stakes were real — therapy sessions that couldn’t fail, operations that couldn’t fall behind, enterprise clients who couldn’t afford downtime. I know how to stay close to execution, own features end to end, and ship products that work under pressure.<br><br>Enterprise loyalty at Xoxoday is the same kind of challenge. High stakes, complex setups, clients who depend on reliability. I’d love to bring that same ownership here.<br><br>Let’s talk.",
+      name: "Saurabh Kumar",
+      phone: "+91 93690 95275",
+      email: "mr.saurabh.kumar408@gmail.com",
+      linkedin: "https://www.linkedin.com/in/saurabh-kumar-workhard/"
+    }
   }
 
   // Add more companies:

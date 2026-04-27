@@ -484,3 +484,170 @@ body.demo-body::before {
 
   .demo-phone { width: 100%; max-width: 320px; height: 520px; }
 }
+
+/* ═══════════════════════════════════════════
+   THEME: ENTERPRISE (Xoxoday)
+   Clean, professional, no notebook aesthetic
+   ═══════════════════════════════════════════ */
+body.demo-theme-enterprise {
+  background: #FFFFFF;
+  color: #1A1A2E;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+body.demo-theme-enterprise::before { display: none; }
+
+body.demo-theme-enterprise .demo-hero h1 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1A1A2E;
+  line-height: 1.15;
+}
+body.demo-theme-enterprise .demo-hero-sub {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6B6B7A;
+  transform: none;
+}
+
+body.demo-theme-enterprise .demo-section-num {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #FF6B35;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+body.demo-theme-enterprise .demo-section-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  color: #1A1A2E;
+}
+body.demo-theme-enterprise .demo-section-body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #4A4A5A;
+}
+body.demo-theme-enterprise .demo-bracket path { stroke: #FF6B35; }
+
+body.demo-theme-enterprise .demo-gap-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E5EC;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(26,26,46,0.04);
+}
+body.demo-theme-enterprise .demo-gap-label {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.68rem;
+  color: #FF6B35;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+body.demo-theme-enterprise .demo-gap-title {
+  color: #1A1A2E;
+  font-size: 1.05rem;
+}
+body.demo-theme-enterprise .demo-gap-body { color: #4A4A5A; }
+
+body.demo-theme-enterprise .demo-compare-header span {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+body.demo-theme-enterprise .demo-compare-row {
+  border-top: 1px solid #E5E5EC;
+}
+body.demo-theme-enterprise .demo-compare-problem {
+  color: #1A1A2E;
+  font-weight: 600;
+}
+body.demo-theme-enterprise .demo-compare-work { color: #4A4A5A; }
+@media (max-width: 768px) {
+  body.demo-theme-enterprise .demo-compare-work::before { color: #FF6B35; }
+}
+
+body.demo-theme-enterprise .demo-nav {
+  background: #FFFFFF;
+  border: 1px solid #E5E5EC;
+  box-shadow: 0 4px 24px rgba(26,26,46,0.08);
+}
+body.demo-theme-enterprise .demo-nav-back,
+body.demo-theme-enterprise .demo-nav-link,
+body.demo-theme-enterprise .demo-nav-dd-link,
+body.demo-theme-enterprise .demo-nav-toggle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #1A1A2E;
+}
+body.demo-theme-enterprise .demo-nav-back:hover,
+body.demo-theme-enterprise .demo-nav-link:hover,
+body.demo-theme-enterprise .demo-nav-dd-link:hover,
+body.demo-theme-enterprise .demo-nav-toggle:hover { color: #FF6B35; background: rgba(255,107,53,0.06); }
+body.demo-theme-enterprise .demo-nav-link.active {
+  background: #FFF4ED;
+  border-bottom-color: #FF6B35;
+  color: #FF6B35;
+}
+body.demo-theme-enterprise .demo-nav-dropdown {
+  background: #FFFFFF;
+  border: 1px solid #E5E5EC;
+  box-shadow: 0 4px 16px rgba(26,26,46,0.08);
+}
+
+body.demo-theme-enterprise .demo-phone {
+  border-color: #1A1A2E;
+}
+body.demo-theme-enterprise .demo-phone::before { background: #1A1A2E; }
+body.demo-theme-enterprise .demo-phone-btn {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #FF6B35;
+}
+body.demo-theme-enterprise .demo-phone-btn:hover { color: #1A1A2E; }
+body.demo-theme-enterprise .demo-phone-counter {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #888;
+  font-size: 0.78rem;
+  letter-spacing: 1.2px;
+}
+body.demo-theme-enterprise .demo-screen-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #1A1A2E;
+}
+body.demo-theme-enterprise .demo-screen-desc {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #6B6B7A;
+}
+
+body.demo-theme-enterprise .demo-closing {
+  border-top: 1px solid #E5E5EC;
+}
+body.demo-theme-enterprise .demo-closing-text {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #4A4A5A;
+  transform: none;
+  max-width: 620px;
+}
+body.demo-theme-enterprise .demo-closing-name { color: #1A1A2E; }
+body.demo-theme-enterprise .demo-closing-name::after {
+  background: #FF6B35;
+  opacity: 1;
+  height: 2px;
+}
+body.demo-theme-enterprise .demo-closing-links {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+body.demo-theme-enterprise .demo-closing-links a { color: #FF6B35; }
+body.demo-theme-enterprise .demo-closing-links a:hover { color: #1A1A2E; }
