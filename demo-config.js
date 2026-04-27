@@ -251,10 +251,10 @@ const DEMO_COMPANIES = {
   "myhq": {
     companyName: "myHQ",
     role: "Product Manager",
-    headline: "What I’d build at myHQ — and why the timing is right.",
+    headline: "What I’d build at myHQ.",
     subline: "A product perspective from Saurabh Kumar · Prepared for the PM role at myHQ",
 
-    intro: `Not a cover letter. I don’t think cover letters tell you much about how a PM thinks.<br><br>This is me showing my work — what I found when I researched myHQ, what the real product gaps are, why my experience maps to them, and one idea I’ve built as a clickable prototype to show how I’d think about your core growth problem.`,
+    intro: `I wanted to go beyond a cover letter and actually show how I think about product problems.<br><br>So I spent time researching myHQ — reading reviews, understanding the business model, mapping out what users actually experience. This document walks through what I found, where I think the biggest opportunities might be, and one idea I’ve prototyped to show my approach.<br><br>I hope it gives you a useful sense of how I work.<br><br><div style="display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;background:#FAFAFA;border:1px solid #EFEAF7;border-radius:12px;padding:14px 18px;margin-top:8px;font-size:14px;line-height:1.4;"><div style="font-weight:700;color:#1A1714;">Saurabh Kumar</div><a href="tel:+919369095275" style="color:#5C2D91;text-decoration:none;font-weight:500;">+91 93690 95275</a><a href="mailto:mr.saurabh.kumar408@gmail.com" style="color:#5C2D91;text-decoration:none;font-weight:500;">mr.saurabh.kumar408@gmail.com</a><a href="https://www.linkedin.com/in/saurabh-kumar-workhard/" target="_blank" style="color:#5C2D91;text-decoration:none;font-weight:500;">LinkedIn →</a></div>`,
 
     understand: {
       title: "What I researched about myHQ",
