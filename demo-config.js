@@ -246,6 +246,298 @@ const DEMO_COMPANIES = {
       email: "mr.saurabh.kumar408@gmail.com",
       linkedin: "https://www.linkedin.com/in/saurabh-kumar-workhard/"
     }
+  },
+
+  "myhq": {
+    companyName: "myHQ",
+    role: "Product Manager",
+    headline: "What I’d build at myHQ — and why the timing is right.",
+    subline: "A product perspective from Saurabh Kumar · Prepared for the PM role at myHQ",
+
+    intro: `Not a cover letter. I don’t think cover letters tell you much about how a PM thinks.<br><br>This is me showing my work — what I found when I researched myHQ, what the real product gaps are, why my experience maps to them, and one idea I’ve built as a clickable prototype to show how I’d think about your core growth problem.`,
+
+    understand: {
+      title: "What I researched about myHQ",
+      content: `<strong>myHQ is not a coworking space. It’s a workspace operating system.</strong><br><br>The product has three distinct user types pulling in different directions. Freelancers who want a desk for three hours. Startup teams who need a meeting room in 45 minutes. Enterprise HR managers coordinating hybrid work for hundreds of employees. One app, three completely different jobs to be done.<br><br>myHQ has set a target of growing from 30,000 to 100,000 on-demand bookings per month. That’s 3x growth. To get there, the product doesn’t just need more users — it needs existing users to book more often. Right now most users book reactively — when they desperately need a space. The product has no mechanism to become a habit.<br><br>After being acquired by ANAROCK and partnering with WeWork India, myHQ now has an enormous supply-side advantage — hundreds of spaces across India’s major cities. The supply problem is largely solved. The demand problem — getting users to think of myHQ first, every time they need a workspace — is what needs a PM’s full attention.<br><br>The other big unlock sitting untouched: <strong>AI</strong>. The JD mentions it three times. myHQ has rich data — user location patterns, booking history, preferred space types, times, durations, price sensitivity. Nobody is using that data to make the booking experience smarter. Right now the app treats every booking like it’s your first. That’s the gap I want to close.`
+    },
+
+    gaps: {
+      title: "The gaps I found",
+      intro: "I read App Store reviews, Play Store reviews, and Product Hunt feedback carefully.",
+      items: [
+        {
+          title: "Booking is transactional, not intelligent",
+          content: `Every user opens the app, searches a location, filters by price, scrolls through options, picks one, and books. Every single time.<br><br>The app has zero memory of who you are, what you prefer, or where you’re likely to be. A freelancer who books the same Indiranagar café every Tuesday still has to search for it from scratch every Tuesday.<br><br>This is the biggest retention and engagement gap. <em>The app is a search engine when it should be a concierge.</em>`
+        },
+        {
+          title: "Space-reality mismatch destroying trust",
+          content: `Multiple users report arriving at a booked space to find it completely different from what was shown — a conference room that turned out to be an open desk row, spaces shown as nearby that were 18km away.<br><br>This is a trust problem that no growth initiative can fix if it’s not addressed first. Users who get burned once don’t come back.`
+        },
+        {
+          title: "Support disappears when you need it most",
+          content: `One App Store reviewer described being denied entry to a coworking space, raising a support ticket, never receiving a callback, and then finding the ticket had been closed as if it never existed.<br><br>When the core product experience fails — which happens in a marketplace — there’s no reliable recovery path. This erodes trust faster than any bad booking experience.`
+        },
+        {
+          title: "No reason to open the app between bookings",
+          content: `Users open myHQ when they need a space. That’s it. No recommendations based on past behaviour. No “you usually work from Koramangala on Fridays — here’s what’s available.” No habit loop. No reason to come back.<br><br>This is the engagement gap that’s keeping bookings low-frequency and preventing myHQ from becoming a daily habit for remote and hybrid workers.`
+        }
+      ]
+    },
+
+    whyme: {
+      title: "Why I think I’m a good fit",
+      intro: "I won’t list my skills. I’ll show you the parallel problems I’ve already solved.",
+      rows: [
+        {
+          problem: "Booking is transactional, not intelligent",
+          mywork: "I shipped two AI workflow systems in production at 15,000 therapy sessions per month — not prototypes, real systems with monitoring, validation, and failure handling. The core skill is the same: take user behaviour data, build a model of what the user needs next, surface the right thing at the right time. myHQ’s AI concierge is a simpler version of what I’ve already shipped. I know how to take this from idea to production."
+        },
+        {
+          problem: "No reason to open the app between bookings",
+          mywork: "This is the exact problem I solved at YourDOST. 65% of engagement was driven by one mandatory activity — therapy sessions. Users had no reason to open the app on non-therapy days. I built games, challenges, journeys, and offline activation loops. Shifted non-mandatory engagement from 35% to 45% across 9,000 users over two years. myHQ’s between-booking engagement gap is the same problem. I know what it takes."
+        },
+        {
+          problem: "Support disappearing when things go wrong",
+          mywork: "I replaced 1,420 hours per month of manual support with a bot-first system. Human agents escalate only at the second layer. Support didn’t just get cheaper — resolution became faster and more consistent. myHQ’s support disappearing at critical moments is a solvable systems problem. I’ve built the system that solves it."
+        },
+        {
+          problem: "AI-native working style",
+          mywork: "I use Claude Code, Lovable, and Google AI Studio daily — for prototyping, spec writing, competitive research, and workflow automation. I don’t use AI as a writing assistant. I use it as a product development accelerator. I’ve cut idea-to-validated-prototype time from weeks to days. That’s the AI-native mindset your JD is looking for three times."
+        },
+        {
+          problem: "Honest gap — B2B SaaS and enterprise workflow",
+          mywork: "myHQ’s enterprise product — managed offices, team plans, HR dashboards — is an area I haven’t worked in directly. My enterprise experience is with platform clients in healthtech. The thinking maps but the context is different. I’ll say that directly rather than oversell it."
+        }
+      ]
+    },
+
+    demo: {
+      title: "The Demo — myHQ Concierge",
+      intro: `<strong>The idea in one line:</strong> What if myHQ stopped asking you where you want to work and just told you?<br><br><strong>The problem it solves:</strong> Booking a workspace on myHQ takes 6–8 taps. Search city. Select area. Filter price. Browse options. Read details. Book. Confirm payment. Every time. For a freelancer who books 3 times a week, that’s 150+ unnecessary decisions a month.<br><br>The deeper problem: the app treats every user identically. A first-time user and a power user who’s booked 50 times get the exact same blank search screen. All that booking history, location data, time patterns, and preference data — sitting unused.<br><br><strong>myHQ Concierge</strong> flips this. Instead of search-first, it’s suggestion-first. The app learns your patterns and surfaces the right space before you even ask.<br><br><strong>Layer 1 — Pattern recognition.</strong> The system learns from your booking history. What areas. What times. What space types. What price range. What amenities matter. After 3–4 bookings it knows you well enough to make a suggestion. After 10 it knows you better than you know yourself.<br><br><strong>Layer 2 — Context awareness.</strong> The concierge reads signals from your day. Calendar shows a client meeting at 3pm in HSR — it surfaces a meeting room nearby with parking. It’s Monday morning and you usually book a focus desk in Koramangala on Mondays — it proactively shows you availability before you open the app.<br><br><strong>Layer 3 — One-tap booking.</strong> The suggestion appears as a card on the home screen. Space, location, distance, price, amenities, availability. One tap to book. No search. No filters. Done in under 10 seconds.<br><br><strong>The business impact:</strong> Booking frequency goes up because the friction of starting a search goes away. Users who currently book reactively start booking proactively because myHQ is thinking ahead for them. Power users become stickier because the app gets smarter with every booking. The data flywheel compounds — more bookings means better suggestions means more bookings.`,
+      screens: [
+        {
+          id: 1,
+          title: "Home — Concierge Card",
+          description: "The home screen surfaces a context-aware suggestion before you search",
+          content: `<div style="font-family:'DM Sans',sans-serif;padding:12px 4px;font-size:13px;color:#1A1714;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+              <div>
+                <div style="font-size:11px;color:#888;">Good morning</div>
+                <div style="font-weight:700;font-size:16px;">Saurabh</div>
+              </div>
+              <div style="width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#5C2D91,#9A4DDB);"></div>
+            </div>
+            <div style="background:linear-gradient(135deg,#5C2D91,#7B3FB8);border-radius:14px;padding:14px;margin-bottom:14px;color:#fff;box-shadow:0 6px 18px rgba(92,45,145,0.22);">
+              <div style="font-size:9px;letter-spacing:1.5px;font-weight:700;opacity:0.85;margin-bottom:6px;">✨ CONCIERGE</div>
+              <div style="font-size:12px;line-height:1.5;margin-bottom:12px;opacity:0.95;">Client meeting at 3pm in HSR — a meeting room nearby, 4 mins away.</div>
+              <div style="background:rgba(255,255,255,0.13);border-radius:10px;padding:10px;margin-bottom:12px;">
+                <div style="font-weight:700;font-size:13px;margin-bottom:2px;">91Springboard HSR</div>
+                <div style="font-size:11px;opacity:0.85;margin-bottom:8px;">₹600 / 2hrs · 4 seats · 0.8 km</div>
+                <div style="display:flex;gap:5px;flex-wrap:wrap;">
+                  <div style="background:rgba(255,255,255,0.2);padding:3px 8px;border-radius:8px;font-size:10px;">Fast wifi</div>
+                  <div style="background:rgba(255,255,255,0.2);padding:3px 8px;border-radius:8px;font-size:10px;">Parking</div>
+                </div>
+              </div>
+              <div style="background:#fff;color:#5C2D91;text-align:center;padding:10px;border-radius:10px;font-weight:700;font-size:13px;">Book in 1 tap →</div>
+            </div>
+            <div style="background:#F5F2FA;border-radius:10px;padding:11px 14px;margin-bottom:14px;color:#888;font-size:12px;">Search location or space name</div>
+            <div style="font-size:10px;color:#888;margin-bottom:8px;font-weight:700;letter-spacing:1px;">RECENT</div>
+            <div style="border:1px solid #EFEAF7;border-radius:10px;padding:10px 12px;margin-bottom:8px;">
+              <div style="font-weight:600;font-size:12px;">WeWork Koramangala</div>
+              <div style="font-size:11px;color:#777;">Tue · ₹450 · 4 hrs</div>
+            </div>
+            <div style="border:1px solid #EFEAF7;border-radius:10px;padding:10px 12px;margin-bottom:14px;">
+              <div style="font-weight:600;font-size:12px;">Innov8 Indiranagar</div>
+              <div style="font-size:11px;color:#777;">Last Fri · ₹380 · 3 hrs</div>
+            </div>
+            <div style="display:flex;justify-content:space-around;padding-top:12px;border-top:1px solid #EFEAF7;font-size:10px;">
+              <div style="text-align:center;color:#5C2D91;font-weight:700;">Home</div>
+              <div style="text-align:center;color:#bbb;">Search</div>
+              <div style="text-align:center;color:#bbb;">Bookings</div>
+              <div style="text-align:center;color:#bbb;">Profile</div>
+            </div>
+          </div>`
+        },
+        {
+          id: 2,
+          title: "Suggestion Detail",
+          description: "Expanded view of the concierge’s pick — amenities, reviews, transparent pricing",
+          content: `<div style="font-family:'DM Sans',sans-serif;padding:12px 4px;font-size:13px;color:#1A1714;">
+            <div style="font-size:14px;color:#5C2D91;margin-bottom:10px;">←</div>
+            <div style="height:120px;border-radius:14px;background:linear-gradient(135deg,#5C2D91 0%,#9A4DDB 50%,#C29DE8 100%);margin-bottom:12px;display:flex;align-items:flex-end;padding:12px;">
+              <div style="background:rgba(255,255,255,0.95);color:#5C2D91;padding:4px 10px;border-radius:20px;font-size:10px;font-weight:700;">✨ Concierge pick</div>
+            </div>
+            <div style="font-weight:700;font-size:16px;margin-bottom:2px;">91Springboard HSR</div>
+            <div style="font-size:11px;color:#777;margin-bottom:4px;">27th Main, HSR Layout, Bengaluru</div>
+            <div style="font-size:11px;color:#5C2D91;font-weight:600;margin-bottom:14px;">0.8 km · 4 mins drive</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;">
+              <div style="background:#F5F2FA;color:#5C2D91;padding:5px 10px;border-radius:14px;font-size:10px;font-weight:600;">Wifi 200 Mbps</div>
+              <div style="background:#F5F2FA;color:#5C2D91;padding:5px 10px;border-radius:14px;font-size:10px;font-weight:600;">4 seats</div>
+              <div style="background:#F5F2FA;color:#5C2D91;padding:5px 10px;border-radius:14px;font-size:10px;font-weight:600;">Parking</div>
+              <div style="background:#F5F2FA;color:#5C2D91;padding:5px 10px;border-radius:14px;font-size:10px;font-weight:600;">Coffee</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:14px;font-size:12px;">
+              <span style="color:#FFB300;">★</span><strong>4.7</strong><span style="color:#777;">· 124 reviews</span>
+            </div>
+            <div style="background:#F5F2FA;border-radius:10px;padding:12px;margin-bottom:14px;">
+              <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;"><span>Meeting room · 2 hrs</span><span>₹600</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:#777;margin-bottom:8px;"><span>Taxes & fees</span><span>₹54</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:#5C2D91;border-top:1px solid #E6DEF1;padding-top:8px;"><span>Total</span><span>₹654</span></div>
+            </div>
+            <div style="background:#5C2D91;color:#fff;text-align:center;padding:12px;border-radius:10px;font-weight:700;font-size:13px;margin-bottom:8px;">Book Now</div>
+            <div style="border:1.5px solid #5C2D91;color:#5C2D91;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:13px;">Save for Later</div>
+          </div>`
+        },
+        {
+          id: 3,
+          title: "One-tap Checkout",
+          description: "No re-entered details. Saved payment method. One tap to confirm.",
+          content: `<div style="font-family:'DM Sans',sans-serif;padding:12px 4px;font-size:13px;color:#1A1714;">
+            <div style="font-size:14px;color:#5C2D91;margin-bottom:10px;">←</div>
+            <div style="font-weight:700;font-size:17px;margin-bottom:14px;">Confirm booking</div>
+            <div style="background:#F5F2FA;border-radius:12px;padding:14px;margin-bottom:14px;">
+              <div style="font-weight:700;font-size:13px;margin-bottom:2px;">91Springboard HSR</div>
+              <div style="font-size:11px;color:#777;">Meeting room · 4 seats</div>
+            </div>
+            <div style="margin-bottom:14px;">
+              <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #EFEAF7;font-size:12px;"><span style="color:#777;">Date</span><span style="font-weight:600;">Today · 27 Apr</span></div>
+              <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #EFEAF7;font-size:12px;"><span style="color:#777;">Time</span><span style="font-weight:600;">2:30 – 4:30 pm</span></div>
+              <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #EFEAF7;font-size:12px;"><span style="color:#777;">Duration</span><span style="font-weight:600;">2 hours</span></div>
+              <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:13px;font-weight:700;color:#5C2D91;"><span>Total</span><span>₹654</span></div>
+            </div>
+            <div style="font-size:10px;color:#888;margin-bottom:8px;font-weight:700;letter-spacing:1px;">PAYING WITH</div>
+            <div style="border:1px solid #EFEAF7;border-radius:10px;padding:12px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <div style="font-weight:600;font-size:12px;">HDFC Credit Card</div>
+                <div style="font-size:11px;color:#777;">•••• 4521</div>
+              </div>
+              <div style="background:#5C2D91;color:#fff;padding:3px 9px;border-radius:8px;font-size:10px;font-weight:600;">Default</div>
+            </div>
+            <div style="background:#5C2D91;color:#fff;text-align:center;padding:13px;border-radius:10px;font-weight:700;font-size:14px;margin-bottom:10px;">Confirm Booking — ₹654</div>
+            <div style="text-align:center;font-size:11px;color:#5C2D91;font-weight:600;">Change payment method</div>
+          </div>`
+        },
+        {
+          id: 4,
+          title: "Booking Confirmed",
+          description: "Confirmation, directions — and the concierge gets smarter from this booking",
+          content: `<div style="font-family:'DM Sans',sans-serif;padding:12px 4px;font-size:13px;color:#1A1714;text-align:center;">
+            <div style="height:14px;"></div>
+            <div style="width:80px;height:80px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(135deg,#5C2D91,#9A4DDB);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(92,45,145,0.3);">
+              <div style="color:#fff;font-size:38px;font-weight:700;line-height:1;">✓</div>
+            </div>
+            <div style="font-weight:700;font-size:20px;margin-bottom:6px;">You’re booked.</div>
+            <div style="font-size:12px;color:#777;margin-bottom:18px;">A confirmation has been sent to your email.</div>
+            <div style="background:#F5F2FA;border-radius:12px;padding:14px;margin-bottom:14px;text-align:left;">
+              <div style="font-weight:700;font-size:13px;margin-bottom:2px;">91Springboard HSR</div>
+              <div style="font-size:11px;color:#777;margin-bottom:10px;">Meeting room · 4 seats</div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;padding-top:8px;border-top:1px solid #E6DEF1;">
+                <span style="color:#777;">Today, 2:30 – 4:30 pm</span>
+                <span style="color:#5C2D91;font-weight:700;">#MHQ7421</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;margin-bottom:18px;">
+              <div style="flex:1;border:1.5px solid #5C2D91;color:#5C2D91;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:12px;">Add to Calendar</div>
+              <div style="flex:1;border:1.5px solid #5C2D91;color:#5C2D91;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:12px;">Get Directions</div>
+            </div>
+            <div style="background:#F5F2FA;border-radius:10px;padding:11px 14px;font-size:11px;color:#5C2D91;line-height:1.5;text-align:left;">✨ Your concierge learned from this booking. Suggestions will get smarter from here.</div>
+          </div>`
+        },
+        {
+          id: 5,
+          title: "Concierge Settings",
+          description: "Teach the concierge your patterns — areas, space type, budget, must-haves",
+          content: `<div style="font-family:'DM Sans',sans-serif;padding:12px 4px;font-size:13px;color:#1A1714;">
+            <div style="font-size:14px;color:#5C2D91;margin-bottom:10px;">←</div>
+            <div style="font-weight:700;font-size:17px;margin-bottom:4px;">Teach your concierge</div>
+            <div style="font-size:11px;color:#777;margin-bottom:18px;line-height:1.5;">The more you tell us, the better the suggestions get.</div>
+            <div style="font-size:10px;color:#888;margin-bottom:8px;font-weight:700;letter-spacing:1px;">PREFERRED AREAS</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;">
+              <div style="background:#5C2D91;color:#fff;padding:5px 11px;border-radius:14px;font-size:11px;font-weight:600;">Koramangala ✓</div>
+              <div style="background:#5C2D91;color:#fff;padding:5px 11px;border-radius:14px;font-size:11px;font-weight:600;">Indiranagar ✓</div>
+              <div style="background:#5C2D91;color:#fff;padding:5px 11px;border-radius:14px;font-size:11px;font-weight:600;">HSR ✓</div>
+              <div style="background:#F5F2FA;color:#5C2D91;padding:5px 11px;border-radius:14px;font-size:11px;font-weight:600;">Whitefield</div>
+              <div style="background:#F5F2FA;color:#5C2D91;padding:5px 11px;border-radius:14px;font-size:11px;font-weight:600;">Marathahalli</div>
+            </div>
+            <div style="font-size:10px;color:#888;margin-bottom:8px;font-weight:700;letter-spacing:1px;">SPACE TYPE</div>
+            <div style="display:flex;gap:6px;margin-bottom:18px;">
+              <div style="flex:1;background:#5C2D91;color:#fff;text-align:center;padding:8px;border-radius:10px;font-size:11px;font-weight:600;">Desk</div>
+              <div style="flex:1;background:#5C2D91;color:#fff;text-align:center;padding:8px;border-radius:10px;font-size:11px;font-weight:600;">Meeting Room</div>
+              <div style="flex:1;background:#F5F2FA;color:#5C2D91;text-align:center;padding:8px;border-radius:10px;font-size:11px;font-weight:600;">Cabin</div>
+            </div>
+            <div style="font-size:10px;color:#888;margin-bottom:8px;font-weight:700;letter-spacing:1px;">BUDGET PER SESSION</div>
+            <div style="margin-bottom:18px;">
+              <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:6px;color:#777;"><span>₹200</span><span style="color:#5C2D91;font-weight:700;">₹300 – ₹800</span><span>₹2000</span></div>
+              <div style="background:#EFEAF7;border-radius:4px;height:6px;position:relative;"><div style="background:#5C2D91;height:6px;border-radius:4px;width:35%;margin-left:10%;"></div></div>
+            </div>
+            <div style="font-size:10px;color:#888;margin-bottom:8px;font-weight:700;letter-spacing:1px;">MUST-HAVE AMENITIES</div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;"><span>Fast wifi</span><span style="color:#5C2D91;font-weight:700;">✓</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;"><span>Parking</span><span style="color:#5C2D91;font-weight:700;">✓</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#aaa;"><span>Coffee</span><span>×</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#aaa;"><span>Standing desk</span><span>×</span></div>
+            </div>
+            <div style="background:#F5F2FA;border-radius:10px;padding:12px;display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <div>
+                <div style="font-weight:600;font-size:12px;">Connect Google Calendar</div>
+                <div style="font-size:10px;color:#777;">For schedule-aware suggestions</div>
+              </div>
+              <div style="width:34px;height:18px;background:#5C2D91;border-radius:10px;position:relative;flex-shrink:0;"><div style="width:14px;height:14px;background:#fff;border-radius:50%;position:absolute;right:2px;top:2px;"></div></div>
+            </div>
+            <div style="background:#5C2D91;color:#fff;text-align:center;padding:12px;border-radius:10px;font-weight:700;font-size:13px;">Save Preferences</div>
+          </div>`
+        },
+        {
+          id: 6,
+          title: "Weekly Summary",
+          description: "A weekly look at your work-from-anywhere life — stats, insights, and a one-tap rebook",
+          content: `<div style="font-family:'DM Sans',sans-serif;padding:12px 4px;font-size:13px;color:#1A1714;">
+            <div style="font-weight:700;font-size:17px;margin-bottom:2px;">Your week at a glance</div>
+            <div style="font-size:11px;color:#777;margin-bottom:16px;">Apr 21 – Apr 27</div>
+            <div style="display:flex;gap:8px;margin-bottom:14px;">
+              <div style="flex:1;background:#F5F2FA;border-radius:10px;padding:12px 8px;text-align:center;">
+                <div style="font-weight:700;font-size:18px;color:#5C2D91;">4</div>
+                <div style="font-size:9px;color:#777;text-transform:uppercase;letter-spacing:0.5px;">Spaces booked</div>
+              </div>
+              <div style="flex:1;background:#F5F2FA;border-radius:10px;padding:12px 8px;text-align:center;">
+                <div style="font-weight:700;font-size:18px;color:#5C2D91;">18</div>
+                <div style="font-size:9px;color:#777;text-transform:uppercase;letter-spacing:0.5px;">Hours away</div>
+              </div>
+              <div style="flex:1;background:#F5F2FA;border-radius:10px;padding:12px 8px;text-align:center;">
+                <div style="font-weight:700;font-size:16px;color:#5C2D91;">₹2,400</div>
+                <div style="font-size:9px;color:#777;text-transform:uppercase;letter-spacing:0.5px;">Spent</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#5C2D91,#7B3FB8);border-radius:12px;padding:14px;color:#fff;margin-bottom:14px;">
+              <div style="font-size:9px;letter-spacing:1.5px;font-weight:700;opacity:0.85;margin-bottom:6px;">✨ INSIGHT</div>
+              <div style="font-size:12px;line-height:1.5;">You’re most productive at <strong>91Springboard Koramangala</strong> — it’s your most-booked space (3x this week).</div>
+            </div>
+            <div style="font-size:10px;color:#888;margin-bottom:10px;font-weight:700;letter-spacing:1px;">BOOKING FREQUENCY</div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;height:80px;margin-bottom:6px;padding:0 4px;">
+              <div style="width:9%;height:30%;background:#C29DE8;border-radius:3px;"></div>
+              <div style="width:9%;height:60%;background:#9A4DDB;border-radius:3px;"></div>
+              <div style="width:9%;height:45%;background:#C29DE8;border-radius:3px;"></div>
+              <div style="width:9%;height:80%;background:#5C2D91;border-radius:3px;"></div>
+              <div style="width:9%;height:50%;background:#9A4DDB;border-radius:3px;"></div>
+              <div style="width:9%;height:15%;background:#EFEAF7;border-radius:3px;"></div>
+              <div style="width:9%;height:10%;background:#EFEAF7;border-radius:3px;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:#888;margin-bottom:18px;padding:0 4px;">
+              <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+            </div>
+            <div style="background:#5C2D91;color:#fff;text-align:center;padding:12px;border-radius:10px;font-weight:700;font-size:13px;">Book your usual spot for next week →</div>
+          </div>`
+        }
+      ]
+    },
+
+    closing: {
+      content: "I’ve spent three years building systems that serve people at their most stressed — someone in a mental health crisis, a therapist managing 15 sessions a day, an operations team handling 1,400 hours of manual work. The common thread is building for trust and building for habit. Making something people rely on, not just use.<br><br>myHQ is at the inflection point where the supply problem is solved and the product intelligence problem is what unlocks the next phase of growth. That’s the work I want to do.<br><br>I’d love to talk.",
+      name: "Saurabh Kumar",
+      phone: "+91 93690 95275",
+      email: "mr.saurabh.kumar408@gmail.com",
+      linkedin: "https://www.linkedin.com/in/saurabh-kumar-workhard/"
+    }
   }
 
   // Add more companies:
