@@ -871,6 +871,423 @@ const DEMO_COMPANIES = {
       email: "mr.saurabh.kumar408@gmail.com",
       linkedin: "https://www.linkedin.com/in/saurabh-kumar-workhard/"
     }
+  },
+
+  "eloelo": {
+    companyName: "Eloelo",
+    role: "APM",
+    theme: "consumer-dark",
+    headline: "What I find interesting about Eloelo — and one idea I’d explore.",
+    subline: "A product perspective from Saurabh Kumar · Prepared for the APM role at Eloelo",
+
+    intro: `I don’t think a cover letter tells you much about how someone thinks about product. So instead of writing one, I spent time understanding Eloelo properly — what it’s building, who it’s for, and where the interesting product problems are. This is that thinking, written down.<br><br><div style="display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 18px;margin-top:8px;font-size:14px;line-height:1.4;font-family:'Inter',system-ui,sans-serif;"><div style="font-weight:700;color:#FFFFFF;">Saurabh Kumar</div><a href="tel:+919369095275" style="color:#FF3CAC;text-decoration:none;font-weight:500;">+91 93690 95275</a><a href="mailto:mr.saurabh.kumar408@gmail.com" style="color:#FF3CAC;text-decoration:none;font-weight:500;">mr.saurabh.kumar408@gmail.com</a><a href="https://www.linkedin.com/in/saurabh-kumar-workhard/" target="_blank" style="color:#FF3CAC;text-decoration:none;font-weight:500;">LinkedIn →</a></div>`,
+
+    understand: {
+      title: "What I researched about Eloelo",
+      content: `Eloelo is a live social entertainment platform built around interactive livestreams and real-time community engagement. That description sounds like a lot of other apps. <strong>What makes Eloelo genuinely different is the focus on participation over consumption.</strong><br><br>Most social platforms are built for passive scrolling. Eloelo is built for active involvement — you’re not watching a stream, you’re playing Tambola with the host, sending virtual gifts, joining a PK battle, chatting in real time. The platform enables creators to host interactive video and audio livestreams in local languages using AI-led tools to build community and monetise directly from their audiences — with over <strong>20,000 creators</strong> now earning a livelihood by streaming.<br><br>The numbers are real. <strong>85 million downloads and 200% YoY growth.</strong> Since switching on monetisation in May 2024, Eloelo reached <strong>$23M ARR with 1.5M paying users.</strong> That’s a meaningful signal — real people paying real money inside the app, not just MAU vanity metrics.<br><br>The next phase is clear from the fundraise: expand into Indian diaspora markets, bolster AI-driven creator tools, and target $60M ARR by end of 2025. The product problems that unlock that growth are: how do you make discovery better so new users find the right streams faster, how do you deepen the creator tools so more creators can grow and earn, and how do you build habit among users who aren’t yet in a daily routine on the platform.<br><br><em>That last one is where I want to focus.</em>`
+    },
+
+    gaps: {
+      title: "The gaps I noticed",
+      intro: "I want to be careful here — I’m looking from the outside, so some of this might already be on the roadmap or already solved. These are observations, not criticisms.",
+      items: [
+        {
+          title: "New user discovery is still largely passive",
+          content: `Eloelo has a wide variety of games — card games, Lucky 7, Antakshari, Tambola, Quiz, roulette — genuinely fun content. But a new user opening the app for the first time sees a feed of live rooms and has to figure out what to join.<br><br>There’s no onboarding that helps them find streams that match their language, interests, or schedule. The first session is often random. <em>Random first sessions don’t convert to habits.</em> If the first stream you join happens to be boring or in a language you don’t speak, you’re gone.`
+        },
+        {
+          title: "Creators have limited tools to understand and grow their audience",
+          content: `More than 20,000 creators are earning a livelihood on the platform. That’s impressive. But if you’re a creator trying to grow, what data do you have?<br><br>When do your viewers show up? Which game formats get the most virtual gifts? Which stream topics keep people longer? Right now I don’t see creator analytics as a prominent feature. <em>Creators who can’t measure can’t improve. Creators who can’t improve eventually plateau and churn.</em>`
+        },
+        {
+          title: "The habit loop between sessions isn’t strong enough",
+          content: `Eloelo is live by nature — you can only watch a stream when it’s happening. If your favourite creator streams at 9pm and you miss it, there’s nothing to come back to.<br><br>Between sessions the app has limited pull. Notifications help but they’re blunt instruments. There’s an opportunity to build smarter between-session engagement — personalised schedules, reminders for upcoming streams from creators you follow, highlights from streams you missed.`
+        }
+      ]
+    },
+
+    whyme: {
+      title: "Why I think some of my experience is relevant",
+      intro: "I want to be straightforward — I haven’t worked in social entertainment. The problems I’ve worked on are in healthtech. But some of them feel related.",
+      rows: [
+        {
+          problem: "Building habit between primary moments",
+          mywork: "At YourDOST, 65% of platform engagement was driven by one thing: therapy sessions. Users had no reason to open the app on non-therapy days. I built a parallel engagement layer — neuroscience games, social challenges, offline activation — that shifted non-mandatory engagement from 35% to 45% across 9,000 users. The underlying problem is similar to Eloelo’s between-session gap: how do you build a reason to open the app when the primary activity isn’t happening right now."
+        },
+        {
+          problem: "Making new users find value faster",
+          mywork: "At Seekho I ran 300+ user interviews and rebuilt onboarding for a 13,000-person community moving from WhatsApp to an app. Activation went from 30% to 55%. The insight was simple: people don’t explore, they need to be guided to the one thing that will make them stay. The same principle applies to Eloelo’s new user discovery problem."
+        },
+        {
+          problem: "Data-driven iteration",
+          mywork: "I’ve instrumented funnels, built dashboards, and made product decisions from data — including setting up PostHog as the analytics system at YourDOST from scratch. I’m comfortable sitting with data to understand what’s actually happening vs what we think is happening. Feels like table stakes for this role."
+        },
+        {
+          problem: "What I’d genuinely need to learn",
+          mywork: "Live streaming product dynamics, creator economy mechanics, and the specific behaviour patterns of Eloelo’s Bharat-first user base. I’d want to spend the first few weeks just watching streams, talking to creators, and understanding the platform from the inside before forming strong opinions."
+        }
+      ]
+    },
+
+    demo: {
+      title: "One idea I’d explore — Creator Growth Dashboard",
+      intro: `<strong>The idea in one sentence:</strong> Give Eloelo’s creators the data they need to understand what’s working and grow their audience deliberately — not by guessing.<br><br><strong>The problem it addresses:</strong> Right now a creator on Eloelo knows their follower count and how many gifts they received. That’s about it. They can’t easily answer: <em>what time of day do my viewers show up? Which game format drives the most gifting? Which topics make viewers stay longer?</em> Without this data, growing as a creator is mostly trial and error.<br><br>This matters for Eloelo’s business because creator quality drives viewer retention. A creator who understands their audience makes better streams. Better streams keep viewers longer. Viewers who stay longer gift more. More gifting means more creator income. More creator income means creators stay on the platform. <strong>It’s a flywheel — and better creator analytics is one of the inputs that makes it spin faster.</strong><br><br><strong>1 — Stream Performance Summary.</strong> After every stream ends, the creator sees a simple summary card: peak concurrent viewers, average watch time, total gifts received, new followers gained, best performing moment. Over time this builds into a history they can learn from.<br><br><strong>2 — Audience Insights.</strong> When do your viewers show up? A simple heatmap showing which days and hours your audience is most active. Which languages your viewers speak. What percentage are new vs returning. This helps creators schedule smarter and tailor their content.<br><br><strong>3 — What’s Working.</strong> A simple comparison across the creator’s last 10 streams — which formats (games vs chat vs performances) drove the most gifting, which topics got the longest average watch time, which stream length is optimal for their specific audience. Not complex analytics — just the 3–4 signals that actually help a creator make better decisions about their next stream.<br><br><strong>Why this is a good first APM project:</strong> Contained enough to ship in a single sprint cycle. Directly impacts a metric Eloelo cares about — creator retention and earnings. Requires working closely with engineering and design to get the data pipeline and UI right. And it creates a feedback loop that helps creators improve over time — which ultimately improves the viewer experience too.`,
+      screens: [
+        {
+          id: 1,
+          title: "Creator Studio",
+          description: "Home — week-at-a-glance, recent streams, and a way into deeper insights",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#fff;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <div>
+                <div style="font-size:10px;color:#B0A0C8;font-weight:500;">Creator Studio</div>
+                <div style="font-weight:700;font-size:14px;letter-spacing:-0.01em;">@PriyaLive</div>
+              </div>
+              <div style="width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#FF3CAC,#6B3FFF);"></div>
+            </div>
+            <div style="background:linear-gradient(135deg,#FF3CAC 0%,#6B3FFF 100%);border-radius:16px;padding:16px;margin-bottom:14px;color:#fff;box-shadow:0 8px 24px rgba(255,60,172,0.3);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;opacity:0.9;margin-bottom:10px;">THIS WEEK</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+                <div>
+                  <div style="font-weight:800;font-size:18px;letter-spacing:-0.01em;">12.4h</div>
+                  <div style="font-size:8.5px;opacity:0.85;text-transform:uppercase;letter-spacing:0.5px;">Streamed</div>
+                </div>
+                <div>
+                  <div style="font-weight:800;font-size:18px;letter-spacing:-0.01em;">₹4,260</div>
+                  <div style="font-size:8.5px;opacity:0.85;text-transform:uppercase;letter-spacing:0.5px;">Earned</div>
+                </div>
+                <div>
+                  <div style="font-weight:800;font-size:18px;letter-spacing:-0.01em;">+340</div>
+                  <div style="font-size:8.5px;opacity:0.85;text-transform:uppercase;letter-spacing:0.5px;">Followers</div>
+                </div>
+              </div>
+            </div>
+            <div style="font-size:10px;color:#B0A0C8;font-weight:600;letter-spacing:1px;margin-bottom:8px;">RECENT STREAMS</div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:11px;margin-bottom:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:start;">
+                <div>
+                  <div style="font-weight:600;font-size:12px;">Tambola Saturday</div>
+                  <div style="font-size:10px;color:#B0A0C8;">Yesterday · 1h 24m</div>
+                </div>
+                <div style="text-align:right;">
+                  <div style="font-size:11px;color:#FF3CAC;font-weight:700;">+₹1,820</div>
+                  <div style="font-size:9px;color:#B0A0C8;">412 viewers</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:11px;margin-bottom:8px;">
+              <div style="display:flex;justify-content:space-between;align-items:start;">
+                <div>
+                  <div style="font-weight:600;font-size:12px;">Antakshari Night</div>
+                  <div style="font-size:10px;color:#B0A0C8;">2 days ago · 58m</div>
+                </div>
+                <div style="text-align:right;">
+                  <div style="font-size:11px;color:#FF3CAC;font-weight:700;">+₹940</div>
+                  <div style="font-size:9px;color:#B0A0C8;">218 viewers</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:11px;margin-bottom:14px;">
+              <div style="display:flex;justify-content:space-between;align-items:start;">
+                <div>
+                  <div style="font-weight:600;font-size:12px;">Quiz with Priya</div>
+                  <div style="font-size:10px;color:#B0A0C8;">4 days ago · 1h 12m</div>
+                </div>
+                <div style="text-align:right;">
+                  <div style="font-size:11px;color:#FF3CAC;font-weight:700;">+₹1,280</div>
+                  <div style="font-size:9px;color:#B0A0C8;">298 viewers</div>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-around;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);font-size:10px;">
+              <div style="text-align:center;color:#FF3CAC;font-weight:700;">Home</div>
+              <div style="text-align:center;color:#666;">Insights</div>
+              <div style="text-align:center;color:#666;">Streams</div>
+              <div style="text-align:center;color:#666;">Profile</div>
+            </div>
+          </div>`
+        },
+        {
+          id: 2,
+          title: "Stream Performance",
+          description: "Post-stream summary — peak viewers, watch time, gifts, and the best moment of the night",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#fff;">
+            <div style="font-size:11px;color:#FF3CAC;font-weight:600;margin-bottom:6px;">← Back</div>
+            <div style="text-align:center;margin-bottom:14px;">
+              <div style="font-size:9px;color:#B0A0C8;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">Stream ended</div>
+              <div style="font-weight:800;font-size:18px;margin-top:4px;letter-spacing:-0.01em;">Tambola Saturday</div>
+              <div style="font-size:11px;color:#B0A0C8;">1h 24m · 412 viewers</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+              <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:11px;">
+                <div style="font-size:9px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">Peak viewers</div>
+                <div style="font-weight:800;font-size:20px;color:#FF3CAC;letter-spacing:-0.01em;">412</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:11px;">
+                <div style="font-size:9px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">Avg watch</div>
+                <div style="font-weight:800;font-size:20px;color:#fff;letter-spacing:-0.01em;">9m 42s</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:11px;">
+                <div style="font-size:9px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">Gifts</div>
+                <div style="font-weight:800;font-size:20px;color:#fff;letter-spacing:-0.01em;">182</div>
+                <div style="font-size:10px;color:#FF3CAC;margin-top:2px;font-weight:600;">₹1,820</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:11px;">
+                <div style="font-size:9px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">New followers</div>
+                <div style="font-weight:800;font-size:20px;color:#fff;letter-spacing:-0.01em;">+58</div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#FF3CAC 0%,#6B3FFF 100%);border-radius:12px;padding:14px;margin-bottom:14px;color:#fff;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;opacity:0.9;margin-bottom:6px;">⚡ BEST MOMENT</div>
+              <div style="font-weight:700;font-size:13px;line-height:1.4;margin-bottom:6px;">42:18 — when you called the full house</div>
+              <div style="font-size:11px;opacity:0.9;line-height:1.5;">Peak engagement here — 184 messages in 60s, 64 gifts in 2 mins.</div>
+              <div style="margin-top:10px;height:30px;background:rgba(255,255,255,0.12);border-radius:6px;">
+                <svg width="100%" height="100%" viewBox="0 0 200 30" preserveAspectRatio="none" style="display:block;"><polyline points="0,22 20,18 40,20 60,16 80,14 95,4 110,8 130,16 150,18 170,20 200,22" fill="none" stroke="#fff" stroke-width="2"/><circle cx="95" cy="4" r="3" fill="#fff"/></svg>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;">
+              <div style="flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);color:#fff;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:12px;">Replay</div>
+              <div style="flex:1;background:#FF3CAC;color:#fff;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:12px;box-shadow:0 4px 14px rgba(255,60,172,0.3);">Share to feed</div>
+            </div>
+          </div>`
+        },
+        {
+          id: 3,
+          title: "Audience Heatmap",
+          description: "When your viewers actually show up — schedule against your peak window",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#fff;">
+            <div style="font-weight:800;font-size:17px;margin-bottom:2px;letter-spacing:-0.01em;">When your audience shows up</div>
+            <div style="font-size:11px;color:#B0A0C8;margin-bottom:14px;">Last 30 days · 8,420 viewers</div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;margin-bottom:12px;">
+              <div style="display:grid;grid-template-columns:18px repeat(5,1fr);gap:4px;margin-bottom:6px;align-items:center;">
+                <div></div>
+                <div style="font-size:8px;color:#B0A0C8;text-align:center;font-weight:600;">MORN</div>
+                <div style="font-size:8px;color:#B0A0C8;text-align:center;font-weight:600;">AFTN</div>
+                <div style="font-size:8px;color:#B0A0C8;text-align:center;font-weight:600;">EVE</div>
+                <div style="font-size:8px;color:#B0A0C8;text-align:center;font-weight:600;">8–11p</div>
+                <div style="font-size:8px;color:#B0A0C8;text-align:center;font-weight:600;">LATE</div>
+              </div>
+              <div style="display:grid;grid-template-columns:18px repeat(5,1fr);gap:4px;margin-bottom:4px;align-items:center;">
+                <div style="font-size:9px;color:#B0A0C8;font-weight:600;">M</div>
+                <div style="height:18px;background:rgba(255,60,172,0.08);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.10);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.18);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.42);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.20);border-radius:3px;"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:18px repeat(5,1fr);gap:4px;margin-bottom:4px;align-items:center;">
+                <div style="font-size:9px;color:#B0A0C8;font-weight:600;">T</div>
+                <div style="height:18px;background:rgba(255,60,172,0.05);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.10);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.20);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.45);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.18);border-radius:3px;"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:18px repeat(5,1fr);gap:4px;margin-bottom:4px;align-items:center;">
+                <div style="font-size:9px;color:#B0A0C8;font-weight:600;">W</div>
+                <div style="height:18px;background:rgba(255,60,172,0.08);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.12);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.22);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.50);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.22);border-radius:3px;"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:18px repeat(5,1fr);gap:4px;margin-bottom:4px;align-items:center;">
+                <div style="font-size:9px;color:#B0A0C8;font-weight:600;">T</div>
+                <div style="height:18px;background:rgba(255,60,172,0.10);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.14);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.25);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.55);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.25);border-radius:3px;"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:18px repeat(5,1fr);gap:4px;margin-bottom:4px;align-items:center;">
+                <div style="font-size:9px;color:#B0A0C8;font-weight:600;">F</div>
+                <div style="height:18px;background:rgba(255,60,172,0.10);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.16);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.32);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.65);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.32);border-radius:3px;"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:18px repeat(5,1fr);gap:4px;margin-bottom:4px;align-items:center;">
+                <div style="font-size:9px;color:#FF3CAC;font-weight:700;">S</div>
+                <div style="height:18px;background:rgba(255,60,172,0.16);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.20);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.34);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.95);border-radius:3px;box-shadow:0 0 8px rgba(255,60,172,0.6);"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.45);border-radius:3px;"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:18px repeat(5,1fr);gap:4px;align-items:center;">
+                <div style="font-size:9px;color:#B0A0C8;font-weight:600;">S</div>
+                <div style="height:18px;background:rgba(255,60,172,0.18);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.22);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.36);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.78);border-radius:3px;"></div>
+                <div style="height:18px;background:rgba(255,60,172,0.38);border-radius:3px;"></div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#FF3CAC 0%,#6B3FFF 100%);border-radius:12px;padding:12px;color:#fff;margin-bottom:12px;">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;opacity:0.9;margin-bottom:6px;">⚡ INSIGHT</div>
+              <div style="font-size:12px;line-height:1.5;"><strong>Saturday 9–10pm is your peak.</strong> Streaming at peak times = 3.2× more gifts on average.</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:11px;display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <div style="font-weight:600;font-size:12px;">Schedule next stream</div>
+                <div style="font-size:10px;color:#B0A0C8;">Sat 9pm · auto-suggest</div>
+              </div>
+              <div style="background:#FF3CAC;color:#fff;padding:6px 11px;border-radius:8px;font-size:11px;font-weight:600;">Schedule</div>
+            </div>
+          </div>`
+        },
+        {
+          id: 4,
+          title: "Audience Profile",
+          description: "Who's watching — returning vs new, languages, regions. Schedule and tailor accordingly.",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#fff;">
+            <div style="font-weight:800;font-size:18px;margin-bottom:2px;letter-spacing:-0.01em;">Who’s watching</div>
+            <div style="font-size:11px;color:#B0A0C8;margin-bottom:14px;">8,420 unique viewers · 30 days</div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;margin-bottom:10px;">
+              <div style="font-size:10px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">RETURNING vs NEW</div>
+              <div style="display:flex;align-items:center;gap:14px;">
+                <div style="position:relative;width:70px;height:70px;flex-shrink:0;">
+                  <svg viewBox="0 0 36 36" style="display:block;"><circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/><circle cx="18" cy="18" r="14" fill="none" stroke="#FF3CAC" stroke-width="4" stroke-dasharray="54.5 87.96" stroke-dashoffset="0" transform="rotate(-90 18 18)" style="filter:drop-shadow(0 0 4px rgba(255,60,172,0.5));"/></svg>
+                  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;">62%</div>
+                </div>
+                <div style="flex:1;font-size:12px;">
+                  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                    <div style="width:8px;height:8px;background:#FF3CAC;border-radius:50%;"></div>
+                    <div><strong>62%</strong> returning</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:8px;">
+                    <div style="width:8px;height:8px;background:rgba(255,255,255,0.25);border-radius:50%;"></div>
+                    <div><strong>38%</strong> new this month</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;margin-bottom:10px;">
+              <div style="font-size:10px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">LANGUAGES</div>
+              <div style="margin-bottom:8px;">
+                <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;"><span>Hindi</span><span style="color:#FF3CAC;font-weight:600;">58%</span></div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:3px;height:5px;"><div style="background:linear-gradient(90deg,#FF3CAC,#6B3FFF);height:5px;border-radius:3px;width:58%;"></div></div>
+              </div>
+              <div style="margin-bottom:8px;">
+                <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;"><span>Bhojpuri</span><span style="color:#FF3CAC;font-weight:600;">22%</span></div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:3px;height:5px;"><div style="background:linear-gradient(90deg,#FF3CAC,#6B3FFF);height:5px;border-radius:3px;width:22%;"></div></div>
+              </div>
+              <div style="margin-bottom:8px;">
+                <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;"><span>Marathi</span><span style="color:#FF3CAC;font-weight:600;">12%</span></div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:3px;height:5px;"><div style="background:linear-gradient(90deg,#FF3CAC,#6B3FFF);height:5px;border-radius:3px;width:12%;"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;"><span>Other</span><span style="color:#B0A0C8;font-weight:600;">8%</span></div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:3px;height:5px;"><div style="background:rgba(255,255,255,0.3);height:5px;border-radius:3px;width:8%;"></div></div>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;">
+              <div style="font-size:10px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">TOP REGIONS</div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span>UP</span><span style="color:#FF3CAC;font-weight:600;">2,420</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span>Bihar</span><span style="color:#FF3CAC;font-weight:600;">1,820</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><span>Maharashtra</span><span style="color:#FF3CAC;font-weight:600;">980</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;padding:5px 0;"><span>Diaspora — UAE</span><span style="color:#FF3CAC;font-weight:600;">420</span></div>
+            </div>
+          </div>`
+        },
+        {
+          id: 5,
+          title: "What's Working",
+          description: "Compare formats, topics and stream length across your last 10 streams",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#fff;">
+            <div style="font-weight:800;font-size:18px;margin-bottom:2px;letter-spacing:-0.01em;">What’s working</div>
+            <div style="font-size:11px;color:#B0A0C8;margin-bottom:14px;">From your last 10 streams</div>
+            <div style="background:linear-gradient(135deg,#FF3CAC 0%,#6B3FFF 100%);border-radius:12px;padding:14px;margin-bottom:12px;color:#fff;box-shadow:0 6px 20px rgba(255,60,172,0.25);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;opacity:0.9;margin-bottom:6px;">🏆 BEST FORMAT</div>
+              <div style="font-weight:800;font-size:20px;letter-spacing:-0.01em;margin-bottom:4px;">Tambola</div>
+              <div style="font-size:11px;opacity:0.9;line-height:1.5;">Drove 64% of your gifts. Avg watch time 2.4× higher than chat streams.</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;margin-bottom:12px;">
+              <div style="font-size:10px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">GIFTS BY FORMAT</div>
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;"><span>Tambola</span><span style="color:#FF3CAC;font-weight:700;">₹2,840</span></div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:3px;height:6px;"><div style="background:linear-gradient(90deg,#FF3CAC,#6B3FFF);height:6px;border-radius:3px;width:92%;"></div></div>
+              </div>
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;"><span>Antakshari</span><span style="color:#FF3CAC;font-weight:700;">₹1,420</span></div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:3px;height:6px;"><div style="background:linear-gradient(90deg,#FF3CAC,#6B3FFF);height:6px;border-radius:3px;width:46%;"></div></div>
+              </div>
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;"><span>Quiz</span><span style="color:#FF3CAC;font-weight:700;">₹920</span></div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:3px;height:6px;"><div style="background:linear-gradient(90deg,#FF3CAC,#6B3FFF);height:6px;border-radius:3px;width:30%;"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;"><span>Just chat</span><span style="color:#B0A0C8;font-weight:700;">₹260</span></div>
+                <div style="background:rgba(255,255,255,0.08);border-radius:3px;height:6px;"><div style="background:rgba(255,255,255,0.25);height:6px;border-radius:3px;width:8%;"></div></div>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;">
+              <div style="font-size:10px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">SWEET SPOT</div>
+              <div style="font-weight:700;font-size:13px;margin-bottom:4px;">60–90 minute streams</div>
+              <div style="font-size:11px;color:#B0A0C8;line-height:1.5;">Your viewers stay longest in 60–90 min streams. Beyond 2 hours, watch time drops 40%.</div>
+            </div>
+          </div>`
+        },
+        {
+          id: 6,
+          title: "Plan Next Stream",
+          description: "A recommendation, not a blank slate — best day, format, length, language for you",
+          content: `<div style="font-family:'Inter',system-ui,sans-serif;padding:8px 4px;color:#fff;">
+            <div style="font-weight:800;font-size:18px;margin-bottom:2px;letter-spacing:-0.01em;">Plan your next stream</div>
+            <div style="font-size:11px;color:#B0A0C8;margin-bottom:14px;">Built from your audience data</div>
+            <div style="background:linear-gradient(135deg,#FF3CAC 0%,#6B3FFF 100%);border-radius:16px;padding:16px;margin-bottom:12px;color:#fff;box-shadow:0 8px 28px rgba(255,60,172,0.32);">
+              <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;opacity:0.9;margin-bottom:8px;">✨ RECOMMENDED</div>
+              <div style="font-weight:800;font-size:22px;letter-spacing:-0.01em;line-height:1.2;margin-bottom:4px;">Saturday · 9:00 PM</div>
+              <div style="font-size:11px;opacity:0.9;margin-bottom:14px;">Your peak audience window</div>
+              <div style="background:rgba(255,255,255,0.15);border-radius:10px;padding:10px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;text-align:left;">
+                  <div>
+                    <div style="font-size:10px;opacity:0.85;">Format</div>
+                    <div style="font-weight:700;font-size:13px;">Tambola</div>
+                  </div>
+                  <div>
+                    <div style="font-size:10px;opacity:0.85;">Length</div>
+                    <div style="font-weight:700;font-size:13px;">75 min</div>
+                  </div>
+                  <div>
+                    <div style="font-size:10px;opacity:0.85;">Lang</div>
+                    <div style="font-weight:700;font-size:13px;">Hindi</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;margin-bottom:12px;">
+              <div style="font-size:10px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">WHY</div>
+              <div style="font-size:11px;line-height:1.6;color:#E5E0F0;">Sat 9pm reaches 3.2× more viewers than weekday streams. Tambola drives 64% of your gifts. 75 min keeps avg watch time above 9 mins.</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;margin-bottom:14px;">
+              <div style="font-size:10px;color:#B0A0C8;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">PROJECTED IMPACT</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div>
+                  <div style="font-weight:800;font-size:18px;color:#FF3CAC;">~480</div>
+                  <div style="font-size:10px;color:#B0A0C8;">est. peak viewers</div>
+                </div>
+                <div>
+                  <div style="font-weight:800;font-size:18px;color:#FF3CAC;">~₹2,200</div>
+                  <div style="font-size:10px;color:#B0A0C8;">est. gifts</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:#FF3CAC;color:#fff;text-align:center;padding:13px;border-radius:10px;font-weight:700;font-size:13px;margin-bottom:8px;box-shadow:0 6px 20px rgba(255,60,172,0.4);">Schedule stream</div>
+            <div style="text-align:center;font-size:11px;color:#B0A0C8;">Or pick another time →</div>
+          </div>`
+        }
+      ]
+    },
+
+    closing: {
+      content: "I find Eloelo genuinely interesting — not just as a product to put on a resume, but as a problem worth working on. Building a platform where people in 8 Indian languages can connect, play, and earn a living is meaningful work. I’d like to contribute to that if it feels like a fit.<br><br>Happy to talk through any of this in more detail.",
+      name: "Saurabh Kumar",
+      phone: "+91 93690 95275",
+      email: "mr.saurabh.kumar408@gmail.com",
+      linkedin: "https://www.linkedin.com/in/saurabh-kumar-workhard/"
+    }
   }
 
   // Add more companies:
