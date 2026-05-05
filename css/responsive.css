@@ -15,7 +15,7 @@ html, body { max-width: 100vw; }
     width: auto;
     max-width: calc(100vw - 24px);
   }
-  .tab-btn { padding: 8px 16px; font-size: 1rem; }
+  .tab-btn { padding: 8px 16px; font-size: 1.25rem; }
   .tab-btn .tab-num { display: none; }
 
   .content-area { padding: 20px 18px 90px; max-width: 100%; overflow-x: hidden; }
@@ -41,17 +41,21 @@ html, body { max-width: 100vw; }
     margin-bottom: 24px;
   }
   .stat-number { font-size: 2.2rem; }
-  .stat-label { font-size: 1rem; }
+  .stat-label { font-size: 1.15rem; }
 
   .notebook-entry { padding-left: 14px; }
-  .hand-list { font-size: 1.15rem; }
-  .hand-list li { padding-left: 20px; }
+  .hand-list { font-size: 1.4rem; line-height: 1.55; }
+  .hand-list li { padding-left: 22px; }
   .pencil-divider { margin: 20px 0; }
+
+  /* Sticky notes — bigger and bolder on mobile */
+  .sticky { font-size: 1.25rem; font-weight: 600; }
 
   /* Career path */
   .career-entry { gap: 12px; }
   .career-role { font-size: 0.9rem; }
   .career-company { font-size: 0.8rem; }
+  .career-label { font-size: 1.25rem; }
 
   /* Work page */
   .work-page-title { font-size: 2.6rem; }

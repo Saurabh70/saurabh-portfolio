@@ -180,12 +180,13 @@ body:not(.intro-active) .content-area {
   background: var(--sticky-yellow);
   padding: 14px 18px;
   font-family: 'Caveat', cursive;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
   color: var(--ink);
   box-shadow: 2px 3px 8px var(--sh-md);
   display: inline-block;
   position: relative;
-  line-height: 1.4;
+  line-height: 1.45;
   transition: background 0.4s, box-shadow 0.4s;
 }
 .sticky::before {

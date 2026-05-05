@@ -137,6 +137,8 @@
 .hand-list {
   font-family: 'Caveat', cursive;
   font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--ink);
   list-style: none;
   padding: 0;
 }

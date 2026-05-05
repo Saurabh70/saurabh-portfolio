@@ -9,12 +9,12 @@ const workEntries = [
     metric: 'NPS 7.5 \u2192 9.2',
     oneliner: 'Shipped two AI systems across 15K sessions/month \u2014 a user session summariser and a real-time therapist copilot',
     bullets: [
-      'Designed and shipped AI workflows serving 12,000 users and 15,000 therapy sessions/month',
-      'User-side: session summarisation \u2192 structured homework \u2192 product nudges \u2192 32% improvement in 3+ session adherence',
-      'Shipped Arva AI \u2014 simulated-user training copilot for new therapist onboarding across different user types',
-      'Real-time therapist copilot: session summaries, user history, upcoming nudges, live therapy cues \u2014 810 admin hours saved',
-      'Privacy-first: consent layer for every data point, full anonymisation before GenAI processing on sensitive clinical data',
-      'Owned prompt design, clinical validation, and monitoring frameworks \u2014 cost, usage, failure flags \u2014 for first-time AI rollout',
+      'Therapy-session NPS lifted 7.5 \u2192 9.2 at 15K sessions/month \u2014 the volume gives the lift weight',
+      '3-session adherence improved 32% via session summarisation \u2192 structured homework \u2192 product nudges',
+      'Inherited zero AI in production and zero clinical-AI guardrails',
+      'Designed and shipped two AI systems serving 12K users / 15K sessions/month: a user-side summariser and a real-time therapist copilot',
+      'Owned prompt design, clinical validation, monitoring (cost, usage, failure flags), and the consent + anonymisation layer for sensitive clinical data',
+      'Therapist copilot saved 810 admin hours/month; Arva AI (simulated-user copilot) cut new-therapist onboarding time across user types',
     ]
   },
   {
@@ -23,10 +23,10 @@ const workEntries = [
     metric: '30 \u2192 150 geo',
     oneliner: 'Built geo-fenced Expert App from scratch \u2014 scaled offline therapy across mining sites, remote locations, blue collar India',
     bullets: [
-      'Zero prior monitoring system existed \u2014 built entire workflow from ground up',
-      'Geo-fenced check-in/checkout, OTP session initiation, structured consent and psychoeducation flows',
-      'Deployed across white collar offices, blue collar sites, mining locations, remote geographies across India',
-      'Now handles 1,200 in-person sessions/month across 150 geographies',
+      'Scaled in-person therapy from 30 \u2192 150 geographies, now running 1,200 sessions/month',
+      'Inherited zero monitoring infrastructure for offline sessions \u2014 no check-in, no consent capture, no audit trail',
+      'Designed and shipped geo-fenced check-in/checkout, OTP session initiation, structured consent and psychoeducation flows',
+      'Rolled out across white-collar offices, blue-collar sites, mining locations, and remote geographies \u2014 first time the platform reached blue-collar India',
     ]
   },
   {
@@ -35,13 +35,12 @@ const workEntries = [
     metric: '35% \u2192 45%',
     oneliner: 'Built a parallel engagement layer so users had a reason to open the app every day \u2014 not just on therapy days',
     bullets: [
-      'Identified 65% of engagement was therapy-only \u2014 a retention risk since users can\u2019t do therapy daily',
-      'Shifted non-therapy engagement from 35% \u2192 45% across 9,000 users over 2 years',
-      'Neuroscience-based games across 5 cognitive skills \u2014 6,500 users in 3 months, D7 retention 19%',
-      'Stepathon, Sleepathon, 21-day challenges \u2014 50 organisations, 2,000 participants',
-      'Offline-to-online activation reaching 15,000 users',
-      'Issue-based journeys: yoga, smoking cessation, digital detox, maternity \u2014 mixed expert/product/social formats',
-      'Instrumented full retention funnels using PostHog for the first time',
+      'Non-therapy engagement lifted 35% \u2192 45% across 9,000 users over 2 years',
+      '65% of engagement was therapy-only \u2014 a retention risk since users can\u2019t do therapy daily',
+      'Built neuroscience-based games across 5 cognitive skills \u2014 6,500 users in 3 months, D7 retention 19%',
+      'Ran Stepathon, Sleepathon, and 21-day challenges \u2014 50 organisations, 2,000 participants',
+      'Designed issue-based journeys (yoga, smoking cessation, digital detox, maternity) mixing expert / product / social formats',
+      'Offline-to-online activation reached 15,000 users; instrumented the platform\u2019s first full retention funnel using PostHog',
     ]
   },
   {
@@ -50,10 +49,11 @@ const workEntries = [
     metric: '1,420 hrs/mo',
     oneliner: 'Replaced manual ops with a bot-first support layer and automated no-show detection \u2014 without hurting quality',
     bullets: [
-      '720 hrs/month of manual servicing + 700 hrs/month of support = 1,420 hrs eliminated',
-      'Bot-first support layer \u2014 human escalation only at second layer',
-      'Automated no-show detection: system detects absence in real time, reaches out to user or expert immediately',
-      'Maintained pre-automation baselines: expert no-show 0.75%, user no-show 20% of total appointments',
+      '1,420 ops hrs/month eliminated \u2014 every additional 1K users used to add ~80 ops hours; now 0',
+      'Inherited a fully manual ops layer: 720 hrs/month of servicing + 700 hrs/month of support, scaling linearly with users',
+      'Designed a bot-first support layer with human escalation only at L2',
+      'Built real-time no-show detection \u2014 system detects absence and reaches out to user or expert immediately',
+      'Held quality baselines post-automation: expert no-show 0.75%, user no-show 20% of total appointments',
     ]
   },
   {
@@ -62,12 +62,12 @@ const workEntries = [
     metric: '65% \u2192 20%',
     oneliner: 'Stepped up after senior PM left \u2014 rebuilt delivery for a 13-person team from a broken setup in 3 sprints',
     bullets: [
-      'Inherited 65% sprint spillover, no release governance, no QA process',
-      'Led 2 PMs, 2 QAs, 2 designers, 7 engineers \u2014 full cross-functional ownership',
-      'Introduced test-case-driven QA, daily standups, stakeholder UAT reviews',
-      'Designed bandwidth model: 60% core features, 30% client customisations, 10% bugs + mentoring',
-      'Cut spillover to 20\u201330% in 3 sprints, weekly release cadence established',
-      'Centralised bug escalation under PM \u2014 SLA dropped from 72 hrs to 12 hrs',
+      'Sprint spillover cut 65% \u2192 20% in 3 sprints; weekly release cadence established',
+      'Senior PM exited mid-roadmap \u2014 inherited a 13-person squad with no release governance and no QA process',
+      'Took full cross-functional ownership of 7 engineers, 2 PMs, 2 QAs, 2 designers',
+      'Introduced test-case-driven QA, daily standups, and stakeholder UAT reviews',
+      'Designed a bandwidth model: 60% core features, 30% client customisations, 10% bugs + mentoring',
+      'Centralised bug escalation under PM \u2014 SLA dropped 72 hrs \u2192 12 hrs',
     ]
   },
   {
@@ -76,10 +76,10 @@ const workEntries = [
     metric: '+42% slots',
     oneliner: 'Built dynamic tiering system so high-value users stopped losing slots to no-shows and casual users',
     bullets: [
-      'Identified inequitable slot access \u2014 critical users had no priority over no-show users',
-      'Tiering factors: org business priority, user type (first-time, critical, regular), behaviour (no-shows, cancellations)',
-      'Premium users got priority access to high-quality slots and top-rated experts',
-      'Increased slot visibility 42% for premium users \u2014 overall utilisation impact just 5%',
+      'Slot visibility lifted +42% for premium / repeat-user segment \u2014 the cohort that drives platform retention and B2B contract value',
+      'Found that critical users had no priority over no-show or casual users \u2014 high-value slots were lost to low-priority bookings',
+      'Designed a dynamic tiering model factoring org business priority, user type (first-time, critical, regular), and behaviour (no-shows, cancellations)',
+      'Premium users routed to high-quality slots and top-rated experts; overall utilisation moved just 5% \u2014 by design, since the goal was redistribution, not growth',
     ]
   },
   {
@@ -88,10 +88,11 @@ const workEntries = [
     metric: '+40% collab',
     oneliner: 'Changed how the team ships \u2014 PMs now show working demos before engineering writes a line of code',
     bullets: [
-      'Shifted from PRD-only handoffs to demo-ready builds using Claude Code, Lovable, Google AI Studio',
-      'Decomposed stories into structured epics and user stories \u2014 reduced ambiguity for engineering',
-      'PM-led pilots for journaling, habit building, impact journeys \u2014 validated with real users before full build',
-      'Increased cross-functional collaboration by 40%',
+      'Cross-functional collaboration up 40% after shifting PMs from PRD-only handoffs to demo-ready builds',
+      'Inherited a culture where engineering wrote the first prototype \u2014 slow loops, ambiguous specs, late-stage rework',
+      'Introduced PM-led prototyping using Claude Code, Lovable, and Google AI Studio \u2014 demos in days, not sprints',
+      'Decomposed stories into structured epics + user stories to cut ambiguity at handoff',
+      'Validated journaling, habit-building, and impact-journey pilots with real users before full engineering build',
     ]
   },
   {
@@ -100,10 +101,11 @@ const workEntries = [
     metric: '500+ outcomes',
     oneliner: 'Moved 13,000 users from WhatsApp to an app and built a learning community that actually got people jobs',
     bullets: [
-      '300+ user interviews, 25+ platform analyses to inform strategy',
-      'Built goal-oriented community: mentor sessions, peer discussions, hackathons using AARRR framework',
-      '55% activation, 100% engagement improvement, 20% DAU growth, 50% MAU retention',
-      '500+ users secured jobs or promotions through improved content discovery',
+      '500+ users secured jobs or promotions through the new in-app learning community',
+      'Started with 13K users on WhatsApp groups — no funnel visibility, no retention data, no path to monetisation',
+      'Ran 300+ user interviews and 25+ platform analyses to inform the migration strategy',
+      'Built a goal-oriented community using the AARRR framework: mentor sessions, peer discussions, hackathons',
+      'Hit 55% activation, 100% engagement lift, 20% DAU growth, 50% MAU retention post-migration',
     ]
   },
 ];
