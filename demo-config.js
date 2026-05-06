@@ -1288,6 +1288,231 @@ const DEMO_COMPANIES = {
       email: "mr.saurabh.kumar408@gmail.com",
       linkedin: "https://www.linkedin.com/in/saurabh-kumar-workhard/"
     }
+  },
+
+  "workatyourdost": {
+    companyName: "YourDOST",
+    role: "Product Manager",
+    headline: "Building AI at YourDOST — making therapy structured for users, and the business operationally scalable without growing the team.",
+    subline: "What I shipped as a PM at India’s largest emotional wellness platform · Saurabh Kumar",
+
+    intro: `A consolidated look at the AI work I led at YourDOST — across the user-facing therapy experience and the operational side of the business. Every bet on this page came back to one question: <em>can we make therapy more structured and impactful for users while making the business operationally scalable, without scaling the human team linearly?</em>`,
+
+    understand: {
+      title: "The premise",
+      content: `Scaling therapy traditionally means scaling everything around it linearly — more therapists, more supervisors, more support, more ops. Every new user added bandwidth somewhere. <em>The unit economics never improved.</em><br><br>I worked across two parallel tracks at YourDOST to break that curve:<br><br><strong>1. For users — therapy becomes more structured and impactful.</strong> A session shouldn’t be a black box that users walk out of and forget. We built memory across sessions, summaries, goals, homework, and personalisation so each session compounds on the last.<br><br><strong>2. For the business — therapy ops scales without scaling humans.</strong> Support, supervision, hiring, training, reminders, tracking — every bottleneck where a human was doing pattern-matching at volume became a candidate for automation. The remaining humans focused on judgment, not throughput.<br><br>What follows is what we shipped across both tracks.`
+    },
+
+    gaps: {
+      title: "AI across the therapy lifecycle",
+      intro: "Three stages of a user’s journey, three layers of AI — each one removing friction or adding structure.",
+      items: [
+        {
+          title: "01 — Before the session",
+          content: `<strong>Arva AI</strong> — an agent that runs structured therapist hiring screens and onboarding/training. We built it because growing the therapist pool meant growing TA + L&D bandwidth in lockstep, which capped how fast we could expand supply. Arva handles the structured layers — case-based screening, training simulations, calibration — so humans only step in for the judgment calls.<br><br><strong>Pre-session Copilot</strong> — synthesises a user’s history (platform usage, past conversations, prior session outcomes, journal entries) into a brief the therapist reads in 60 seconds before each session. Therapists used to walk into sessions with patchy memory of previous conversations — especially repeat users across long arcs. The brief gives them continuity without the cognitive load.`
+        },
+        {
+          title: "02 — In the session",
+          content: `<strong>In-session Copilot</strong> — live transcription, automated session documentation, and notetaking. Therapists used to either type during sessions (breaks rapport) or write notes from memory afterwards (incomplete, time-consuming). The Copilot listens, transcribes, structures the conversation into themes/action items/risk flags, and produces session notes cleaner than anyone could write themselves.<br><br>The therapist can be fully present. The notes are better. Documentation overhead drops to near zero.`
+        },
+        {
+          title: "03 — After the session",
+          content: `Four things that turn a one-off session into a continuous arc:<br><br>• <strong>Session summary</strong> — a user-facing recap of what was discussed, in plain language.<br>• <strong>Goal setting</strong> — generated from the session, refined with the user.<br>• <strong>Homework planning</strong> — personalised exercises tied to the session’s themes.<br>• <strong>Personalisation</strong> — next-session prep that loops back into the pre-session Copilot, so the therapist starts the next session knowing what the user worked on between sessions.<br><br>The arc closes. Each session compounds on the last.`
+        }
+      ]
+    },
+
+    whyme: {
+      title: "Operational impact behind the scenes",
+      intro: "The user-facing AI gets the attention. The behind-the-scenes automation is where the real cost-curve break happens — these are the places where a human team used to scale linearly with the user base, and now doesn’t.",
+      headers: { left: "where humans were stretched", right: "what AI now handles" },
+      rows: [
+        {
+          problem: "The support team manually triaged every ticket from Freshdesk and drafted replies. Volume scaled with users.",
+          mywork: "I led a ticket-analysis bot that reads incoming tickets, classifies intent, drafts the first-layer response, and only escalates ambiguous or high-emotion ones. We built it by analysing historical Freshdesk patterns to define exactly what could be safely automated — and what shouldn’t be."
+        },
+        {
+          problem: "The ops team manually nudged users for upcoming sessions, missed follow-ups, and incomplete onboarding.",
+          mywork: "Backend automation we shipped now owns reminder cadences and tracking flows end-to-end — across session reminders, no-show recovery, onboarding nudges, and post-session follow-ups."
+        },
+        {
+          problem: "Senior therapists manually scrubbed session recordings and transcripts to supervise junior therapists and flag concerning sessions.",
+          mywork: "Supervision AI flags negative-sentiment sessions, risk indicators, and protocol breaches — seniors only spend their time on what genuinely needs their judgment, not on routine review."
+        },
+        {
+          problem: "The L&D team designed training programs and tracked progress for every new therapist joining the platform.",
+          mywork: "Arva AI handles structured onboarding and continuous evaluation, so L&D can focus on edge cases and quality."
+        }
+      ]
+    },
+
+    demo: {
+      title: "What the products actually look like",
+      intro: `Four screens covering the user’s arc plus the supervision layer behind it. These are simplified renders of the actual surfaces we shipped, not concept art.`,
+      screens: [
+        {
+          id: 1,
+          title: "Pre-session brief",
+          description: "Therapist view — 60-second read before the session starts",
+          content: `<div style="font-family:'DM Sans',system-ui,sans-serif;padding:8px 4px;color:#1A1714;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <div>
+                <div style="font-size:10px;color:#888;font-weight:500;letter-spacing:0.4px;">Session in 12 min</div>
+                <div style="font-weight:700;font-size:14px;letter-spacing:-0.01em;">Riya M. · 5th session</div>
+              </div>
+              <div style="font-size:10px;color:#D4380D;background:#FBE9E0;padding:4px 8px;border-radius:6px;font-weight:600;">brief</div>
+            </div>
+            <div style="background:#1A1714;border-radius:14px;padding:14px;margin-bottom:10px;color:#fff;">
+              <div style="font-size:9px;color:#FFB199;font-weight:700;letter-spacing:1.5px;margin-bottom:6px;">MOOD TREND · LAST 14 DAYS</div>
+              <div style="display:flex;align-items:flex-end;gap:3px;height:36px;">
+                <div style="flex:1;background:#D4380D;height:30%;border-radius:2px;"></div>
+                <div style="flex:1;background:#D4380D;height:45%;border-radius:2px;"></div>
+                <div style="flex:1;background:#D4380D;height:35%;border-radius:2px;"></div>
+                <div style="flex:1;background:#D4380D;height:60%;border-radius:2px;"></div>
+                <div style="flex:1;background:#D4380D;height:55%;border-radius:2px;"></div>
+                <div style="flex:1;background:#FF8866;height:70%;border-radius:2px;"></div>
+                <div style="flex:1;background:#FF8866;height:80%;border-radius:2px;"></div>
+              </div>
+              <div style="font-size:11px;color:#C9C2BA;margin-top:8px;line-height:1.4;">Improving since last session. Sleep tracker entries up.</div>
+            </div>
+            <div style="background:#fff;border:1px solid #E8DECC;border-radius:12px;padding:12px;margin-bottom:10px;">
+              <div style="font-size:9px;color:#888;font-weight:700;letter-spacing:1.2px;margin-bottom:6px;">LAST SESSION · 8 DAYS AGO</div>
+              <div style="font-size:12px;line-height:1.5;color:#3A3530;">Worked on boundary-setting with manager. Committed to a 1:1 conversation by Friday. Surfaced anxiety around perceived underperformance.</div>
+            </div>
+            <div style="background:#fff;border:1px solid #E8DECC;border-radius:12px;padding:12px;margin-bottom:10px;">
+              <div style="font-size:9px;color:#888;font-weight:700;letter-spacing:1.2px;margin-bottom:6px;">JOURNAL ENTRIES · 3 NEW</div>
+              <div style="font-size:12px;line-height:1.5;color:#3A3530;">"Had the conversation. It went better than I thought." — 2 days ago</div>
+            </div>
+            <div style="background:#FBE9E0;border:1px solid #F4C5B0;border-radius:12px;padding:12px;">
+              <div style="font-size:9px;color:#D4380D;font-weight:700;letter-spacing:1.5px;margin-bottom:6px;">SUGGESTED TALKING POINTS</div>
+              <div style="font-size:12px;line-height:1.6;color:#3A3530;">• Follow up on Friday’s 1:1<br>• Revisit the underperformance narrative<br>• Explore what made the conversation easier than expected</div>
+            </div>
+          </div>`
+        },
+        {
+          id: 2,
+          title: "In-session live",
+          description: "Live transcript on one side, auto-categorised notes on the other",
+          content: `<div style="font-family:'DM Sans',system-ui,sans-serif;padding:8px 4px;color:#1A1714;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:10px;color:#D4380D;font-weight:600;"><span style="width:6px;height:6px;border-radius:50%;background:#D4380D;display:inline-block;"></span> RECORDING · 18:42</div>
+                <div style="font-weight:700;font-size:14px;letter-spacing:-0.01em;margin-top:2px;">Riya M. · Live session</div>
+              </div>
+              <div style="font-size:10px;color:#888;background:#F0EBE0;padding:4px 8px;border-radius:6px;font-weight:500;">notes auto</div>
+            </div>
+            <div style="background:#fff;border:1px solid #E8DECC;border-radius:12px;padding:12px;margin-bottom:10px;max-height:140px;overflow:hidden;">
+              <div style="font-size:9px;color:#888;font-weight:700;letter-spacing:1.2px;margin-bottom:8px;">LIVE TRANSCRIPT</div>
+              <div style="font-size:11px;line-height:1.55;color:#555;">
+                <div style="margin-bottom:6px;"><strong style="color:#1A1714;">Riya:</strong> So I had the conversation with my manager on Friday …</div>
+                <div style="margin-bottom:6px;"><strong style="color:#D4380D;">You:</strong> How did that feel afterwards?</div>
+                <div style="margin-bottom:6px;"><strong style="color:#1A1714;">Riya:</strong> Honestly, lighter than I expected. I think I was building it up.</div>
+                <div style="color:#999;font-style:italic;">…</div>
+              </div>
+            </div>
+            <div style="background:#1A1714;border-radius:12px;padding:12px;color:#fff;margin-bottom:10px;">
+              <div style="font-size:9px;color:#FFB199;font-weight:700;letter-spacing:1.5px;margin-bottom:8px;">AUTO-NOTES · THEMES SO FAR</div>
+              <div style="font-size:11px;line-height:1.6;color:#E8DECC;">
+                • Boundary-setting follow-through (positive)<br>
+                • Self-awareness around catastrophising<br>
+                • Workplace identity — returning theme
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <div style="background:#fff;border:1px solid #E8DECC;border-radius:10px;padding:10px;">
+                <div style="font-size:8px;color:#888;font-weight:700;letter-spacing:1px;margin-bottom:4px;">ACTION ITEMS</div>
+                <div style="font-weight:700;font-size:18px;color:#D4380D;">3</div>
+              </div>
+              <div style="background:#fff;border:1px solid #E8DECC;border-radius:10px;padding:10px;">
+                <div style="font-size:8px;color:#888;font-weight:700;letter-spacing:1px;margin-bottom:4px;">RISK FLAGS</div>
+                <div style="font-weight:700;font-size:18px;color:#0AA970;">none</div>
+              </div>
+            </div>
+          </div>`
+        },
+        {
+          id: 3,
+          title: "Post-session summary",
+          description: "User view — what was discussed, the goal, the homework",
+          content: `<div style="font-family:'DM Sans',system-ui,sans-serif;padding:8px 4px;color:#1A1714;">
+            <div style="margin-bottom:14px;">
+              <div style="font-size:10px;color:#888;font-weight:500;letter-spacing:0.4px;">Today · 4:30 PM session</div>
+              <div style="font-weight:700;font-size:16px;letter-spacing:-0.01em;margin-top:2px;">Your session recap</div>
+            </div>
+            <div style="background:#FBE9E0;border:1px solid #F4C5B0;border-radius:12px;padding:14px;margin-bottom:10px;">
+              <div style="font-size:9px;color:#D4380D;font-weight:700;letter-spacing:1.5px;margin-bottom:6px;">WHAT WE DISCUSSED</div>
+              <div style="font-size:12px;line-height:1.55;color:#3A3530;">You shared how the Friday conversation with your manager went better than you expected. We explored the gap between the story you tell yourself and what actually happens in those moments.</div>
+            </div>
+            <div style="background:#fff;border:1px solid #E8DECC;border-radius:12px;padding:12px;margin-bottom:10px;">
+              <div style="font-size:9px;color:#888;font-weight:700;letter-spacing:1.2px;margin-bottom:8px;">KEY TAKEAWAYS</div>
+              <div style="font-size:12px;line-height:1.7;color:#3A3530;">
+                • You’re better at hard conversations than you give yourself credit for.<br>
+                • Catastrophising is a pattern — not the truth.<br>
+                • Evidence beats anxiety. Keep collecting it.
+              </div>
+            </div>
+            <div style="background:#1A1714;border-radius:12px;padding:14px;color:#fff;margin-bottom:10px;">
+              <div style="font-size:9px;color:#FFB199;font-weight:700;letter-spacing:1.5px;margin-bottom:6px;">YOUR HOMEWORK · THIS WEEK</div>
+              <div style="font-size:12px;line-height:1.6;color:#E8DECC;">Each evening, write down one moment where reality was kinder than your prediction. 2 minutes. No essays.</div>
+            </div>
+            <div style="background:#fff;border:1px solid #E8DECC;border-radius:12px;padding:12px;">
+              <div style="font-size:9px;color:#888;font-weight:700;letter-spacing:1.2px;margin-bottom:6px;">GOAL FOR NEXT SESSION</div>
+              <div style="font-size:12px;line-height:1.55;color:#3A3530;">Bring the week’s evidence list. We’ll look at the pattern together.</div>
+            </div>
+          </div>`
+        },
+        {
+          id: 4,
+          title: "Supervision dashboard",
+          description: "Senior therapist view — only what needs human judgment",
+          content: `<div style="font-family:'DM Sans',system-ui,sans-serif;padding:8px 4px;color:#1A1714;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <div>
+                <div style="font-size:10px;color:#888;font-weight:500;letter-spacing:0.4px;">Supervision queue</div>
+                <div style="font-weight:700;font-size:14px;letter-spacing:-0.01em;">Today</div>
+              </div>
+              <div style="font-size:10px;color:#D4380D;background:#FBE9E0;padding:4px 8px;border-radius:6px;font-weight:600;">7 flagged</div>
+            </div>
+            <div style="background:#1A1714;border-radius:12px;padding:14px;color:#fff;margin-bottom:10px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <div style="font-size:9px;color:#FFB199;font-weight:700;letter-spacing:1.5px;">NEEDS REVIEW</div>
+                <div style="font-size:10px;color:#FFB199;">priority</div>
+              </div>
+              <div style="font-size:12px;line-height:1.5;color:#E8DECC;">Session #4821 — risk language detected at 14:32. Junior therapist did not escalate. <strong style="color:#fff;">Review now →</strong></div>
+            </div>
+            <div style="background:#fff;border:1px solid #E8DECC;border-radius:10px;padding:11px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <div style="font-size:11px;font-weight:700;color:#1A1714;">#4819 · Aman B.</div>
+                <div style="font-size:10px;color:#888;margin-top:2px;">Negative sentiment trend · 3 sessions</div>
+              </div>
+              <div style="font-size:10px;color:#D4380D;font-weight:600;">flag</div>
+            </div>
+            <div style="background:#fff;border:1px solid #E8DECC;border-radius:10px;padding:11px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <div style="font-size:11px;font-weight:700;color:#1A1714;">#4815 · Priya K.</div>
+                <div style="font-size:10px;color:#888;margin-top:2px;">Protocol breach — missed risk-screen</div>
+              </div>
+              <div style="font-size:10px;color:#D4380D;font-weight:600;">flag</div>
+            </div>
+            <div style="background:#F0EBE0;border-radius:10px;padding:11px;display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <div style="font-size:11px;font-weight:700;color:#3A3530;">141 sessions</div>
+                <div style="font-size:10px;color:#888;margin-top:2px;">auto-cleared today — no review needed</div>
+              </div>
+              <div style="font-size:10px;color:#0AA970;font-weight:600;">all clear</div>
+            </div>
+          </div>`
+        }
+      ]
+    },
+
+    closing: {
+      content: "YourDOST is the work I’m proudest of — not because of any single feature, but because we genuinely changed the slope. Therapy got better and more structured for users while the business got cheaper and more scalable to run. Both at once.<br><br>If you’re building something where AI needs to augment humans without replacing the judgment that matters, I’d love to talk.",
+      name: "Saurabh Kumar",
+      phone: "+91 93690 95275",
+      email: "mr.saurabh.kumar408@gmail.com",
+      linkedin: "https://www.linkedin.com/in/saurabh-kumar-workhard/"
+    }
   }
 
   // Add more companies:

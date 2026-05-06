@@ -4,7 +4,20 @@
 
 const workEntries = [
   {
-    num: '01', cat: 'AI', catColor: 'red', catRotate: -1.4,
+    num: '01', cat: 'Deep Dive', catColor: 'red', catRotate: -1.6,
+    title: 'AI AT YOURDOST \u2014 THE FULL DEEP DIVE',
+    metric: 'all of it',
+    oneliner: 'A consolidated walkthrough of every AI bet I led at YourDOST \u2014 user-facing therapy AI plus the operational automation behind the business',
+    bullets: [
+      'Three-stage user-facing AI: pre-session Copilot, in-session transcription + auto-notes, post-session summary + goals + homework',
+      'Arva AI \u2014 agent that runs therapist hiring screens and structured onboarding/training',
+      'Operational automation: Freshdesk ticket bot, reminder + tracking flows, supervision AI for negative-sentiment session review',
+      'The single consolidated narrative of how we made therapy more structured for users and operationally scalable for the business \u2014 without growing the team linearly',
+    ],
+    link: 'demo/workatyourdost'
+  },
+  {
+    num: '02', cat: 'AI', catColor: 'red', catRotate: -1.4,
     title: 'AI INITIATIVES & THERAPY INTELLIGENCE',
     metric: 'NPS 7.5 \u2192 9.2',
     oneliner: 'Shipped two AI systems across 15K sessions/month \u2014 a user session summariser and a real-time therapist copilot',
@@ -18,7 +31,7 @@ const workEntries = [
     ]
   },
   {
-    num: '02', cat: 'Platform', catColor: 'blue', catRotate: 1.2,
+    num: '03', cat: 'Platform', catColor: 'blue', catRotate: 1.2,
     title: 'IN-PERSON COUNSELLING INFRASTRUCTURE',
     metric: '30 \u2192 150 geo',
     oneliner: 'Built geo-fenced Expert App from scratch \u2014 scaled offline therapy across mining sites, remote locations, blue collar India',
@@ -30,7 +43,7 @@ const workEntries = [
     ]
   },
   {
-    num: '03', cat: 'Retention', catColor: 'red', catRotate: -0.8,
+    num: '04', cat: 'Retention', catColor: 'red', catRotate: -0.8,
     title: 'EVERYDAY ENGAGEMENT PLATFORM',
     metric: '35% \u2192 45%',
     oneliner: 'Built a parallel engagement layer so users had a reason to open the app every day \u2014 not just on therapy days',
@@ -44,7 +57,7 @@ const workEntries = [
     ]
   },
   {
-    num: '04', cat: 'Automation', catColor: 'blue', catRotate: 1.5,
+    num: '05', cat: 'Automation', catColor: 'blue', catRotate: 1.5,
     title: 'SERVICING & SUPPORT AUTOMATION',
     metric: '1,420 hrs/mo',
     oneliner: 'Replaced manual ops with a bot-first support layer and automated no-show detection \u2014 without hurting quality',
@@ -57,7 +70,7 @@ const workEntries = [
     ]
   },
   {
-    num: '05', cat: 'Leadership', catColor: 'red', catRotate: -1.1,
+    num: '06', cat: 'Leadership', catColor: 'red', catRotate: -1.1,
     title: 'SPRINT & RELEASE INFRASTRUCTURE',
     metric: '65% \u2192 20%',
     oneliner: 'Stepped up after senior PM left \u2014 rebuilt delivery for a 13-person team from a broken setup in 3 sprints',
@@ -71,7 +84,7 @@ const workEntries = [
     ]
   },
   {
-    num: '06', cat: 'Personalisation', catColor: 'blue', catRotate: 0.9,
+    num: '07', cat: 'Personalisation', catColor: 'blue', catRotate: 0.9,
     title: 'ORG TIERING & SLOT PERSONALISATION',
     metric: '+42% slots',
     oneliner: 'Built dynamic tiering system so high-value users stopped losing slots to no-shows and casual users',
@@ -83,7 +96,7 @@ const workEntries = [
     ]
   },
   {
-    num: '07', cat: 'AI Tooling', catColor: 'red', catRotate: -0.6,
+    num: '08', cat: 'AI Tooling', catColor: 'red', catRotate: -0.6,
     title: 'PM-LED PROTOTYPING & DEMO CULTURE',
     metric: '+40% collab',
     oneliner: 'Changed how the team ships \u2014 PMs now show working demos before engineering writes a line of code',
@@ -96,7 +109,7 @@ const workEntries = [
     ]
   },
   {
-    num: '08', cat: 'Community', catColor: 'blue', catRotate: 1.3,
+    num: '09', cat: 'Community', catColor: 'blue', catRotate: 1.3,
     title: 'COMMUNITY-LED GROWTH \u2014 SEEKHO',
     metric: '500+ outcomes',
     oneliner: 'Moved 13,000 users from WhatsApp to an app and built a learning community that actually got people jobs',
@@ -143,7 +156,11 @@ function buildWorkList() {
 
     card.querySelector('.work-read-btn').addEventListener('click', (e) => {
       e.stopPropagation();
-      openCaseStudy(idx);
+      if (entry.link) {
+        window.location.href = entry.link;
+      } else {
+        openCaseStudy(idx);
+      }
     });
 
     container.appendChild(card);

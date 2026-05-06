@@ -118,7 +118,9 @@ function buildCaseStudyHTML(data, index) {
    Case Study Data
    ═══════════════════════════════════════════ */
 const caseStudies = [
-  // 01 — AI Initiatives (FULL)
+  // 01 — Deep dive entry (links externally to /demo/workatyourdost — no modal content needed)
+  null,
+  // 02 — AI Initiatives (FULL)
   {
     title: 'AI INITIATIVES & THERAPY INTELLIGENCE',
     subtitle: 'mental health platform \u00B7 2024',
@@ -161,43 +163,43 @@ const caseStudies = [
       reflection: 'We underestimated how long clinical validation would take. The consent layer was right to build first but slowed rollout by 3 weeks. If I did this again I\u2019d run clinical review in parallel with prompt development, not sequentially. Also \u2014 therapist adoption needed more change management than we planned for.',
     }
   },
-  // 02 — In-Person Counselling (placeholder)
+  // 03 — In-Person Counselling (placeholder)
   {
     title: 'IN-PERSON COUNSELLING INFRASTRUCTURE',
     subtitle: 'geo-scale platform \u00B7 2023\u20132024',
     metrics: ['30 \u2192 150 geographies', '1,200 sessions/month'],
   },
-  // 03 — Engagement Platform (placeholder)
+  // 04 — Engagement Platform (placeholder)
   {
     title: 'EVERYDAY ENGAGEMENT PLATFORM',
     subtitle: 'retention & engagement \u00B7 2023\u20132024',
     metrics: ['35% \u2192 45% engagement', '9K users', 'D7 retention 19%'],
   },
-  // 04 — Servicing Automation (placeholder)
+  // 05 — Servicing Automation (placeholder)
   {
     title: 'SERVICING & SUPPORT AUTOMATION',
     subtitle: 'ops automation \u00B7 2023',
     metrics: ['1,420 hrs/month eliminated'],
   },
-  // 05 — Sprint Infrastructure (placeholder)
+  // 06 — Sprint Infrastructure (placeholder)
   {
     title: 'SPRINT & RELEASE INFRASTRUCTURE',
     subtitle: 'delivery & leadership \u00B7 2023',
     metrics: ['65% \u2192 20% spillover'],
   },
-  // 06 — Slot Personalisation (placeholder)
+  // 07 — Slot Personalisation (placeholder)
   {
     title: 'ORG TIERING & SLOT PERSONALISATION',
     subtitle: 'platform personalisation \u00B7 2024',
     metrics: ['+42% slot visibility'],
   },
-  // 07 — PM Prototyping (placeholder)
+  // 08 — PM Prototyping (placeholder)
   {
     title: 'PM-LED PROTOTYPING & DEMO CULTURE',
     subtitle: 'AI tooling & culture \u00B7 2024',
     metrics: ['+40% collaboration'],
   },
-  // 08 — Seekho (placeholder)
+  // 09 — Seekho (placeholder)
   {
     title: 'COMMUNITY-LED GROWTH \u2014 SEEKHO',
     subtitle: 'edtech community \u00B7 2021\u20132022',

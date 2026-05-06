@@ -140,14 +140,15 @@ if (!company) {
   `;
 
   // Section 03 — Why me
+  const wh = company.whyme.headers || { left: "your problem", right: "my equivalent work" };
   html += `
     <div class="demo-section" id="sec-whyme">
       <div class="demo-section-num">03</div>
       <div class="demo-section-title">${company.whyme.title}</div>
       ${company.whyme.intro ? `<div class="demo-section-body" style="margin-bottom:20px;">${company.whyme.intro}</div>` : ''}
       <div class="demo-compare-header">
-        <span>your problem</span>
-        <span>my equivalent work</span>
+        <span>${wh.left}</span>
+        <span>${wh.right}</span>
       </div>
       ${company.whyme.rows.map(r => `
         <div class="demo-compare-row">
